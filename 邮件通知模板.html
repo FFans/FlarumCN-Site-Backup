@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    </head>
+</html>
+	
+	<body style="font-family: 'Open Sans', sans-serif; background: white; color: #426799; margin: 0; padding: 0;">
+		<div class="card-container" style="width:100%; max-width:720px; text-align:left; margin:0 auto; padding-top:20px; padding-bottom:20px;">
+			<div class="card-body" style="border-radius:5px; border:1px solid #eee; overflow:hidden;">
+				<h1 class="card-title" style="color:#fff; background:#3798e8; font-size:24px; font-weight:normal; padding: 20px 40px; margin:0;">
+					有新帖！
+				</h1>
+				<div class="card-postContent" style="background:#fff; padding:20px 32px 40px; color:#6e6e6e; font-size:13px; line-height:24px;">
+					<p>{!! $user->display_name !!}, 您好!</p>
+					<p>您关注的主题：<a href="{!! $baseUrl !!}/d/{!! $blueprint->post->discussion_id !!}" target="_blank" style="color: #3798e8; text-decoration: none;">{!! $blueprint->post->discussion->title !!}</a>
+						<br>
+					</p>
+					<p>{!! $blueprint->post->user->display_name !!} 回了个帖子:
+						<br>
+					</p>
+					<div class="card-replyContent" style="color:#6e6e6e; padding:10px 20px; background:#f8f8f8; margin:0; -webkit-box-orient: vertical; -webkit-line-clamp: 2; overflow: hidden; max-height: 100px;">
+						{!! $blueprint->post->formatContent() !!}
+					</div>
+					<p>您可以点击
+						<a href="{!! $baseUrl !!}/d/{!! $blueprint->post->discussion_id !!}/{!! $blueprint->post->number !!}" target="_blank" style="color: #3798e8; text-decoration: none;">查看完整内容</a>
+					</p>
+					<p>欢迎再度光临
+						<a href="{{ $baseUrl }}" style="color: #3798e8;	text-decoration: none;">Flarum 中文社区</a>
+					</p>
+					<p>除非您取消收藏这个主题，否则主题下一有新帖发出，您就会收到邮件通知。</p>
+					<p>(此邮件由系统自动发出, 请勿回复。如有打扰，请见谅。)</p>
+					<p></p>
+					<p></p>
+				</div>
+				<p class="card-footer" style="color:#6e6e6e; text-align:right; padding:0 32px; font-size:13px; line-height:24px;">
+					邮件发自：<a href="{{ $baseUrl }}" style="color: #3798e8;	text-decoration: none;">Flarum 中文社区</a>
+					<br>
+					主题：<a href="https://github.com/halo-dev/halo" style="color: #3798e8;	text-decoration: none;">©Halo</a>
+				</p>
+			</div>
+		</div>
+</body>

@@ -1,0 +1,106 @@
+<style>
+    .IndexPage .DiscussionListItem-info>.item-tags,
+    .UserPage .DiscussionListItem-info>.item-tags {
+        margin-right: 0;
+        position: inherit;
+        padding-right: 10px
+    }
+
+    .IndexPage .DiscussionListItem-info>.item-tags,
+    .UserPage .DiscussionListItem-info>.item-tags {
+        transition: none;
+        -webkit-mask-image: none
+    }
+</style>
+
+<!-- 外链跳转 -->
+<script>
+    document.addEventListener('click', event => {
+        let t = event.target;
+        if (t.matches('.Post-body a[target="_blank"]')) {
+            let url = new URL(t.href);
+            if (url.origin == document.location.origin) {
+                t.removeAttribute('target');
+                t.removeAttribute('rel');
+            }
+        }
+    }, false);
+</script>
+
+<!-- 百度站长 -->
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+<footer class="site-footer">
+    <div class="footer-container">
+        <div style="color: rgb(137, 137, 140);font-size:0.9em;" class="rm-link-color">
+            <p>
+                <!-- 加载时间 -->
+                <script>
+                    var start_time = new Date();
+                    var end_time = "";
+                    var loadt = setInterval(function () {
+                        if (document.readyState == "complete") {
+                            showLoadTime();
+                        }
+                    }, 500)
+
+                    function showLoadTime() {
+                        end_time = new Date();
+                        loadtime_span.innerHTML = "T " + (end_time.getTime() - start_time.getTime()) + " ms";
+                        clearInterval(loadt);
+                    }
+                </script>
+                <!-- IP -->
+                <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+                <script type="text/javascript">
+                    document.write("<span align=center>IP " + returnCitySN["cip"] + "</span>")
+                </script>
+
+                <span class="mx-2">|</span>
+
+                <span id="loadtime_span">T</span>
+
+            </p>
+            <p>
+                <a id="prot_span" href="https://discuss.flarum.org.cn/docs/protocol.html"></a>
+
+                <span class="mx-2">|</span>
+
+                <a id="rept_span" href="mailto:flarumcn@qq.com"></a>
+
+                <span class="mx-2">|</span>
+
+                <span id="ver_span"></span>
+            </p>
+            <!-- 声明 -->
+            <script type="text/javascript">
+                var lang = document.getElementsByTagName("html");
+                var userLang = lang[0].getAttribute("lang");
+                if (userLang.includes("zh")) {
+                    prot_span.innerHTML = "社区规范";
+                    rept_span.innerHTML = "违法和不良信息举报";
+                    ver_span.innerHTML = "版本 20.09.26";
+                    document.write("<p>本站独立于 Flarum 基金会运行。<a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> 了解官方授权社区</a></p>")
+                }
+                else {
+                    prot_span.innerHTML = "Protocol";
+                    rept_span.innerHTML = "Report";
+                    ver_span.innerHTML = "Version 20.09.26";
+                    document.write("<p>This site operates independently of the Flarum Foundation. Read more about <a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> verified communities</a>.</p>")
+                }
+            </script>
+        </div>
+    </div>
+</footer>
