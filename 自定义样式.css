@@ -191,7 +191,7 @@ body video {
 
 /* 私人讨论成员名颜色 */
 .Hero span.RecipientLabel-text {
-	color:@config-primary-color;
+	color:#FFF;
 }
 /* 未读 */
 .unread .DiscussionListItem-title:after {
@@ -306,18 +306,17 @@ legend {
     .item-flagrow-ad{display:none;}
 }
 
-/*---------------------Yannis 基础调整开始----------------------------*/
+/*---------------------Yannis 样式调整开始----------------------------*/
 
 /*优化气泡遮挡问题*/
 .NotificationsDropdown-unread,.new .NotificationsDropdown-unread{background:#fff;position:absolute;z-index:3!important}
-@media (max-width:767px){.KvotheSub{margin-top:10px;margin-bottom:10px}
-}
+@media (max-width:767px){.KvotheSub{margin-top:10px;margin-bottom:10px}}
 
 /*补充Iconfont*/
 i.icon.fas.fa-lms:before{content:"";background:url(https://eo.gs/images/flarum/lemon.svg);position:relative;display:block;width:32px;height:32px;top:-5px;left:-4px}
 
 /*基础调整*/
-
+.Settings-privacy legend { position: absolute; display: none; }
 ::-webkit-scrollbar{width:5px;height:5px}
 ::-webkit-scrollbar-thumb{background:@config-primary-color}
 ::-webkit-scrollbar-track{background:#e8ecf3}
@@ -330,70 +329,78 @@ i.icon.fas.fa-lms:before{content:"";background:url(https://eo.gs/images/flarum/l
 .Avatar{border-radius:20%!important}
 .App-header .Button.active,.App-header .Button.focus,.App-header .Button:active,.App-header .Button:focus,.App-header .Button:hover,.App-header .open>.Dropdown-toggle.Button,.ButtonGroup>.Dropdown-toggle:hover,.open>.Button.Dropdown-toggle{border-radius:10%!important}
 
-
-/*-------------------------活力橙样式相关-------------------------*/
-/* Yannis 风格调整 2020-7-19*/
-@media (min-width:769px){
-a { color: #d86e70; }
-body{background:#f6f6f6 url(https://css.yannis.cn/img/flarumcn_orange/new_bodybg.png) 10px fixed}
-.PostStream-item:not(:last-child){border-bottom:none}
-.IndexPage h3.DiscussionListItem-title{text-overflow:ellipsis;overflow:hidden;white-space:nowrap}
-.DiscussionHero .TagsLabel .TagLabel{color:#4d698e;font-size:16px!important}
-h3.DiscussionListItem-title{padding-bottom:3px}
-.UserCard.Hero.UserHero{background:#79a3dc!important}
-.DiscussionListItem{margin-top:10px}
-.DiscussionListItem-info{color:#888}
-.EventPost-icon{text-align:center;margin-left:-19px;width:64px;font-size:22px}
-.DiscussionListItem:hover{background:#eaeaea}
-.DiscussionList:not(.DiscussionList--searchResults) .read .DiscussionListItem-title{color:#1b2028}
-.scroll-up{padding:9px!important;background-color:#3c3329!important}
-.DiscussionHero .TagsLabel .TagLabel.colored .TagLabel-text{color:inherit!important;font-size:16px}
-.Scrubber-handle{background-color:transparent!important}
-kuoxo.com{author:yannisme}
-.Hero{background:#63584f0d!important;margin-bottom:15px}
-.Hero h2{font-size:2em;font-weight:bolder;color:#191919}
-.Hero-subtitle{color:#000;font-size:15px;margin:8px 0 0;line-height:1.5em}
-/*.App:before{background:linear-gradient(to right,#fb9b47,#f48663,#ee757a)}*/
-/*.App:before { background: linear-gradient(to right, #2f3149, #3f2b48, #8d3b3c); }*/
-.App-header .Button,.App-header .Button:hover{color:#fff}
-.UserPage .Hero h2{color:#fff}
-.Post-body{font-size:14px;line-height:1.7;position:relative;overflow:auto;overflow-wrap:break-word;border-radius:5px;margin-top:0;border:1px solid #f8f8f8;box-shadow:0 3px 9px 1px rgba(0,0,0,.1)!important;background:#fff;padding:20px;min-height:80px}
-.Post-body>:first-child,.Post-preview>:first-child{margin-top:0!important}
-.Post-actions{margin-top:5px}
-.Post-footer{margin-top:10px;margin-bottom:0}
-.Post-header{margin-bottom:10px;color:grey}
-.PostStream-timeGap{padding-top:0;padding-bottom:0}
-.Select-caret{margin-left:5px}
-.Post{padding-bottom:10px}
-.PostStream-timeGap span{margin-top:-10px;position:absolute}
-.UserPage .Post-body{box-shadow:none!important}
-.tooltip.right{margin-left:-29px;margin-top:-18px;padding:0}
-i.icon.fas.fa-check.Button-icon{color:@config-primary-color}
-.touch i.icon.fas.fa-check.Button-icon{color:#facfc0 !important}
+/*---------------------Yannis 主要样式调整 10-8-2020----------------------------*/
+.IndexPage .DiscussionListItem-info>.item-tags,.UserPage .DiscussionListItem-info>.item-tags{position:inherit!important;-webkit-mask-image:none!important;padding-right:10px}
+::-webkit-scrollbar{width:5px;height:5px}
+::-webkit-scrollbar-thumb{background:@config-primary-color}
+::-webkit-scrollbar-track{background:#ededed}
+.Search-input:before{display:inline-block;font-size:inherit;text-rendering:auto;content:"\f002";float:left;margin-right:-36px;width:36px;font-size:14px;text-align:center;position:relative;padding:7px 0;line-height:1.5;pointer-events:none;background:#0000000f;color:#fff;border-radius:4px 0 0 4px}
+.Search-input input{float:left;width:225px;padding-left:50px;padding-right:32px;-webkit-transition:all .4s;-o-transition:all .4s;transition:all .4s;box-sizing:inherit!important}
+body{font-family:'Microsoft YaHei',"Open Sans","Clear Sans","Helvetica Neue",Helvetica,Arial,sans-serif;line-height:1.6}
+@media (min-width:1120px){.containerNarrow{max-width:100%}
+.Post-header{text-align:left;border-bottom:1px solid #ededed}
+.PostUser-badges{display:none}
+.DiscussionPage-stream{margin-left:-85px}
+.Hero{border-bottom:2px solid @config-primary-color}
+.Hero .container{padding-top:15px;padding-bottom:15px}
+.PostUser-avatar{vertical-align:middle;position:relative;left:-7px;top:-2px;width:1.5em;height:1.5em;font-size:1em;line-height:1.5em}
+.UserPage .Post{padding-left:18px}
+.DiscussionListItem-badges{width:0}
+.IndexPage .containerNarrow{float:none;text-align:center}
+.containerNarrow{float:left;text-align:left}
+.DiscussionHero--colored,.DiscussionHero--colored a{text-align:left}
+.Hero.DiscussionHero.DiscussionHero--colored{background:@config-primary-color!important}
+.Post--BestAnswer{background:#6dbb3e!important;position:absolute;margin-top:-1px;right:0!important;text-align:left;width:auto;z-index:999}
+.Post-footer .item-bestAnswerPost{background-color:#ededed!important}
+.Post-body{font-size:15px}
+.Post-body a{padding:1px;padding-top:0}
+.DiscussionListItem-badges{margin-left:-47px;margin-top:4px}
+.Badge,.Badge .Badge-icon{vertical-align:middle}
+.EventPost-icon{margin-top:2px;margin-left:0;padding-right:10px;width:auto;font-size:1.5em}
+.sideNavOffset{max-width:800px}
+.TagsPage nav.IndexPage-nav.sideNav{overflow:hidden;margin-right:-99999px}
+.TagsPage .sideNavOffset{max-width:1200px}
+.Post a.inline-image-link{margin-top:15px}
+.item-edited .ButtonGroup>.Button{padding:0}
+.DiscussionHero-items{text-align:left}
+.PostUser-level{float:right!important;position:inherit!important;margin:0!important}
+.PostUser-bar{border-radius:.1px!important;margin-top:7px;height:6px!important;top:7px!important}
+.PostUser-text{position:absolute;right:55px;top:7px;width:77px;font-size:12px}
+}
+.topbutton i{padding:5px}
+.topbutton a{color:#fff;text-decoration:unset}
+.IndexPage-nav .item-newDiscussion .Button{width:auto}
+.Flagrow-Ads-fake-poststream-item{border:0!important}
+.PostStream-item:not(:last-child){border:0}
+@media (max-width:1024px) and (min-width:768px){.sideNavOffset{max-width:700px}
+nav.IndexPage-nav.sideNav{width:100%;position:initial!important;white-space:nowrap;overflow:auto}
+.ComposerBody-header h3,.ComposerBody-header h3 a,.ComposerBody-header h3 input,.Post-body,.TextEditor textarea{font-size:1rem}
+.PostsUserPage-discussion a{font-style:normal}
+.UserPage .Post-header,.item-bestAnswerPost .Post-header{border-bottom:0}
+}
+.scroll-up{background-color:#ea725d}
+.UserPage .darkenBackground{background:@config-primary-color}
+.Post--hidden .Post-header .Button--more{margin-top:-4px}
+.PostStream-timeGap{padding:0}
+a.PostMention{border:1px solid #ddd!important}
+.DiscussionListItem-title{font-family:-apple-system,SF UI Display,Arial,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif}
+.Post-warning-summary{color:@config-primary-color!important}
+.EventPost-icon,.UserPage .DiscussionListItem-info>.item-tags,.UserPage .Post-header{display:none}
+.EventPost-info{padding-left:10px;border-left:5px solid @config-primary-color}
+.DiscussionListItem-info .item-excerpt{margin:0 0 8px!important;font-size:13px!important;line-height:24px!important}
+.App-header .Button{color:#fff}
+.UserCard.UserCard--popover.in .UserCard-avatar{float:left;margin-left:-130px;margin-top:-41px}
+.UserCard-info{margin:8px 0 0!important}
+.UserCard-info .item-bio{margin:auto!important}
+li.item-settings.social-button{margin-top:-15px!important;position:absolute!important}
+@media (min-width:768px){.scroll-up{padding:9px!important}
 }
 
-
-/* 等级条背景色 */
-div.PostUser-bar--empty {
-    background: #1e2024!important;
-}
-.PostUser-bar {
-    background: #f3763f!important;
-}
-/*活力橙夜间模式兼容*/
-body.dark a{border:none}
-body.dark .Post-body a{ color: #905c74!important}
-body.dark li.item-bestAnswerPost p{color:#fff}
-body.dark li.item-bestAnswerPost{background:0 0}
-body.dark span.BestAnswer--User .username{color:#fff}
-body.dark .PostStream-timeGap{padding:0 0 15px 0}
-body.dark .PostStream-timeGap span{margin-top:-20px;border-bottom:2px solid #fafafa}
-body.dark .Hero-subtitle,body.dark h2.Hero-title{color:#75798a}
-body.dark h3.DiscussionListItem-title{color:#76798c!important}
-body.dark h2.DiscussionHero-title{color:#75798a}
-body.dark .Post-body{border:0;box-shadow:none!important;background:none}
+body.dark .Hero.DiscussionHero.DiscussionHero--colored{background:#16171c!important}
+body.dark .Post-header{text-align:left;border-bottom:1px solid #1e2024}
+body.dark .PostStream-item:not(:last-child){border-bottom:0!important}
+body.dark .Post-body{border:0;box-shadow:none!important;background:0 0}
 body.dark .Post-body blockquote{border-left-color:#eca354;border-left-width:2px}
 body.dark .aaalert.aaquote .aainner{background-color:#423930;color:#fff}
-i.fa.fa-chevron-up { COLOR: white; }
-
-/*---------------------Yannis 基础调整结束----------------------------*/
+body.dark .darkenBackground{background:#16171c!important}
+/*---------------------Yannis 样式调整结束 10-8-2020----------------------------*/
