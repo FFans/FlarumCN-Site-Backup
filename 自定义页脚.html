@@ -65,7 +65,7 @@
                 <!-- IP -->
                 <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
                 <script type="text/javascript">
-                    document.write("<span align=center>IP " + returnCitySN["cip"] + "</span>")
+                    document.write("<span align=center>" + returnCitySN["cname"] + " " + returnCitySN["cip"] + "</span>")
                 </script>
 
                 <span class="mx-2">|</span>
@@ -86,18 +86,19 @@
             </p>
             <!-- 声明 -->
             <script type="text/javascript">
+                var site_version = "10.8.2020";
                 var lang = document.getElementsByTagName("html");
                 var userLang = lang[0].getAttribute("lang");
                 if (userLang.includes("zh")) {
                     prot_span.innerHTML = "社区规范";
                     rept_span.innerHTML = "违法和不良信息举报";
-                    ver_span.innerHTML = "版本 20.09.26";
+                    ver_span.innerHTML = "版本 " + site_version;
                     document.write("<p>本站独立于 Flarum 基金会运行。<a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> 了解官方授权社区</a></p>")
                 }
                 else {
                     prot_span.innerHTML = "Protocol";
                     rept_span.innerHTML = "Report";
-                    ver_span.innerHTML = "Version 20.09.26";
+                    ver_span.innerHTML = "Version " + site_version;
                     document.write("<p>This site operates independently of the Flarum Foundation. Read more about <a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> verified communities</a>.</p>")
                 }
             </script>
