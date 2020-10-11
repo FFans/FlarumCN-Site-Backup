@@ -372,6 +372,7 @@ span.TagLabel.colored{background:#fff1f0!important}
 .UserPage .Post-footer{margin-bottom:-20px}
 .UserPage .Post-actions,.UserPage span.DiscussionListItem-count,.UserPage.DiscussionListItem-info>li{display:none}
 .DiscussionPage li.item-discussion-views{display:none}
+button.Button.Button--icon.Button--link.hasIcon{color:#c9c9c9}
 @media (min-width:1120px){.PostStream-timeGap{padding:0}
 .PostUser-badges{display:block!important;float:left;position:relative;margin-left:10px;margin-right:15px;margin-top:-1px;width:auto;max-width:60px}
 .containerNarrow{max-width:100%}
@@ -404,7 +405,7 @@ span.TagLabel.colored{background:#fff1f0!important}
 .PostUser-text{position:absolute;right:55px;top:7px;width:77px;font-size:12px}
 }
 @media (max-width:1024px) and (min-width:768px){.sideNavOffset{max-width:700px}
-nav.IndexPage-nav.sideNav{width:100%;position:initial!important;white-space:nowrap;overflow:auto}
+nav.IndexPage-nav.sideNav{position:initial!important;white-space:nowrap;overflow:auto}
 .ComposerBody-header h3,.ComposerBody-header h3 a,.ComposerBody-header h3 input,.Post-body,.TextEditor textarea{font-size:1rem}
 .PostsUserPage-discussion a{font-style:normal}
 .UserPage .Post-header,.item-bestAnswerPost .Post-header{border-bottom:0}
