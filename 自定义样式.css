@@ -375,8 +375,12 @@ span.TagLabel.colored{background:#fff1f0!important}
 button.Button.Button--icon.Button--link.hasIcon{color:#c9c9c9}
 @media (min-width:1300px){.PostStream-timeGap{padding:0}
 }
-@media (max-width:770px){.Post-header{margin-bottom:15px;color:#75798a;padding-bottom:5px;border-bottom:1px solid #ededed}
+@media (max-width:770px){
+.Post-header{margin-bottom:15px;color:#75798a;padding-bottom:5px;border-bottom:1px solid #ededed}
 .Post-header .Avatar{width:20px;height:20px;line-height:inherit;margin-right:5px}
+.Post--BestAnswer .BestAnswer--User{display:initial!important}
+.Post-footer .item-bestAnswerPost{background-color:#ededed!important}
+.Post--BestAnswer{background:#ea6f5a!important}
 }
 @media (min-width:770px){.PostUser-badges{display:block!important;float:left;position:relative;margin-left:10px;margin-right:15px;margin-top:-1px;width:auto;max-width:60px}
 .containerNarrow{max-width:100%}
@@ -390,7 +394,7 @@ button.Button.Button--icon.Button--link.hasIcon{color:#c9c9c9}
 .IndexPage .containerNarrow{float:none;text-align:center}
 .containerNarrow{float:left;text-align:left}
 .DiscussionHero--colored,.DiscussionHero--colored a{text-align:left}
-.Hero.DiscussionHero.DiscussionHero--colored{background:@config-primary-color!important}
+.Hero.DiscussionHero.DiscussionHero--colored{background: #ea715d !important}
 .Post--BestAnswer{background:@config-primary-color!important;position:absolute;margin-top:-1px;right:0!important;text-align:left;width:auto;z-index:999}
 .Post-footer .item-bestAnswerPost{background-color:#ededed!important}
 .Post-body{font-size:15px}
@@ -407,8 +411,7 @@ button.Button.Button--icon.Button--link.hasIcon{color:#c9c9c9}
 .PostUser-level{float:right!important;position:inherit!important;margin:0!important}
 .PostUser-bar{border-radius:.1px!important;margin-top:7px;height:6px!important;top:7px!important}
 .PostUser-text{position:absolute;right:55px;top:7px;width:77px;font-size:12px}
-.scroll-up{padding:9px!important}
-}
+.scroll-up{padding:9px!important}}
 @media (max-width:1024px) and (min-width:768px){.sideNavOffset{max-width:700px}
 nav.IndexPage-nav.sideNav{position:initial!important;white-space:nowrap;overflow:auto}
 .ComposerBody-header h3,.ComposerBody-header h3 a,.ComposerBody-header h3 input,.Post-body,.TextEditor textarea{font-size:1rem}
@@ -424,5 +427,8 @@ body.dark .aaalert.aaquote .aainner{background-color:#423930;color:#fff}
 body.dark .darkenBackground{background:#16171c!important}
 body.dark .UserPage .PostsUserPage-discussion a{background:#17181c}
 body.dark .fa-chevron-up:before{color:#fff}
+body.dark .Post-footer .item-bestAnswerPost{background-color:#1e2024!important}
+body.dark .Post-footer .item-bestAnswerPost .Post-body{color:#ececef}
+body.dark .Post-header,body.dark .Post-header a{color:#fff!important}
 
-/*---------------------Yannis 样式调整结束 10-8-2020----------------------------*/
+/*---------------------Yannis 样式调整结束 10-22-2020----------------------------*/
