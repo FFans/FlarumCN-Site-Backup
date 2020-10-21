@@ -382,7 +382,8 @@ button.Button.Button--icon.Button--link.hasIcon{color:#c9c9c9}
 .Post-footer .item-bestAnswerPost{background-color:#ededed!important}
 .Post--BestAnswer{background:#ea6f5a!important}
 }
-@media (min-width:770px){.PostUser-badges{display:block!important;float:left;position:relative;margin-left:10px;margin-right:15px;margin-top:-1px;width:auto;max-width:60px}
+@media (min-width:770px){
+.PostUser-badges{display:block!important;float:left;position:relative;margin-left:10px;margin-right:15px;margin-top:-1px;width:auto;max-width:60px}
 .containerNarrow{max-width:100%}
 .Post-header{text-align:left;border-bottom:1px solid #ededed}
 .DiscussionPage-stream{margin-left:-85px}
@@ -411,7 +412,8 @@ button.Button.Button--icon.Button--link.hasIcon{color:#c9c9c9}
 .PostUser-level{float:right!important;position:inherit!important;margin:0!important}
 .PostUser-bar{border-radius:.1px!important;margin-top:7px;height:6px!important;top:7px!important}
 .PostUser-text{position:absolute;right:55px;top:7px;width:77px;font-size:12px}
-.scroll-up{padding:9px!important}}
+.scroll-up{padding:9px!important}
+}
 @media (max-width:1024px) and (min-width:768px){.sideNavOffset{max-width:700px}
 nav.IndexPage-nav.sideNav{position:initial!important;white-space:nowrap;overflow:auto}
 .ComposerBody-header h3,.ComposerBody-header h3 a,.ComposerBody-header h3 input,.Post-body,.TextEditor textarea{font-size:1rem}
@@ -431,4 +433,4 @@ body.dark .Post-footer .item-bestAnswerPost{background-color:#1e2024!important}
 body.dark .Post-footer .item-bestAnswerPost .Post-body{color:#ececef}
 body.dark .Post-header,body.dark .Post-header a{color:#fff!important}
 
-/*---------------------Yannis 样式调整结束 10-22-2020----------------------------*/
+/*---------------------Yannis 样式调整结束 10-8-2020----------------------------*/
