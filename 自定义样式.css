@@ -313,10 +313,9 @@ legend {
 @media (max-width:767px){.KvotheSub{margin-top:10px;margin-bottom:10px}}
 
 /*补充Iconfont*/
-i.icon.fas.fa-lms:before{content:"";background:url(https://eo.gs/images/flarum/lemon.svg);position:relative;display:block;width:32px;height:32px;top:-5px;left:-4px}
-
-i.icon.fas.fa-sd:before{content:"";background:url(https://flarum.csur.fun/2020-10-08/1602154578-369737-b6749300-4d35-4e22-810b-482b8d43a72d.svg);position:relative;display:block;width:30px;height:30px;top:-7px;left:-6px}
-
+i.icon.fas.fa-lms:before{content:"";background:url(https://flarum.csur.fun/2020-10-23/1603458950-770410-1.png) no-repeat;position:relative;display:block;width:30px;height:30px;top:-3px;left:-3px}
+i.icon.fas.fa-sd:before{content:"";background:url(https://flarum.csur.fun/2020-10-23/1603458261-83809-3e1410a2-1f63-4f4d-82e2-f7fb85e213eb.png) no-repeat;position:relative;display:block;width:30px;height:30px;top:-1px;left:-1px}
+i.icon.fas.fa-cbg:before{content:"";background:url(https://flarum.csur.fun/2020-10-23/1603458063-84374-1.png) no-repeat;position:relative;display:block;width:30px;height:30px;top:-1px;left:-1px}
 
 
 /*基础调整*/
@@ -383,7 +382,7 @@ button.Button.Button--icon.Button--link.hasIcon{color:#c9c9c9}
 .Post--BestAnswer{background:#ea6f5a!important}
 }
 @media (min-width:770px){
-.PostUser-badges{display:block!important;float:left;position:relative;margin-left:10px;margin-right:15px;margin-top:-1px;width:auto;max-width:60px}
+.PostUser-badges{display:block!important;float:left;position:relative;margin-left:10px;margin-right:15px;margin-top:-3px;width:auto;max-width:60px}
 .containerNarrow{max-width:100%}
 .Post-header{text-align:left;border-bottom:1px solid #ededed}
 .DiscussionPage-stream{margin-left:-85px}
@@ -433,4 +432,6 @@ body.dark .Post-footer .item-bestAnswerPost{background-color:#1e2024!important}
 body.dark .Post-footer .item-bestAnswerPost .Post-body{color:#ececef}
 body.dark .Post-header,body.dark .Post-header a{color:#fff!important}
 
-/*---------------------Yannis 样式调整结束 10-8-2020----------------------------*/
+.TagLabel-text i.icon.fas.fa-check,.TagLabel-text i.icon.fas.fa-question-circle { display: contents; }
+
+/*---------------------Yannis 样式调整结束 10-25-2020----------------------------*/
