@@ -1,3 +1,18 @@
+<!doctype html>
+<!-- 公告 -->
+<script type="text/javascript">
+    window.onload = function () {
+        var vcurrent = document.getElementsByClassName("IndexPage-toolbar")[0];
+        //下面
+        var newNodeBottom = document.createElement("div");
+        newNodeBottom.className = "announcement";
+        newNodeBottom.innerHTML = '<span>Beta 15 及 Sticky 扩展发布安全更新，详情查看置顶主题。 </span>';
+        vcurrent.parentNode.insertBefore(newNodeBottom, vcurrent.nextSibling);
+        vcurrent.setAttribute("class", "IndexPage-toolbar RemoveAnnounce");
+	}
+</script>
+<!-- <a href="http://p.tb.cn/74s4TO" target="_blank">Laravel 高危漏洞披露</a> <i class="fas fa-external-link-alt"></i>，Flarum 不受影响。线上环境请避免开启调试模式。 -->
+
 <style>
     .IndexPage .DiscussionListItem-info>.item-tags,
     .UserPage .DiscussionListItem-info>.item-tags {
@@ -64,9 +79,10 @@
                     }
                 </script>
                 <!-- IP -->
+				<span id="ip_span" align=center></span>
                 <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
                 <script type="text/javascript">
-                    document.write("<span align=center>" + returnCitySN["cname"] + " " + returnCitySN["cip"] + "</span>")
+                    ip_span.innerHTML = returnCitySN["cname"] + " " + returnCitySN["cip"];
                 </script>
 
                 <span class="mx-2">|</span>
@@ -75,7 +91,7 @@
 
                 <span class="mx-2">|</span>
 
-                <a href="https://stats.uptimerobot.com/QAL8xc6m8y" target="_blank">状态</a>
+                <a id="stats" href="https://stats.uptimerobot.com/QAL8xc6m8y" target="_blank"></a>
 
             </p>
             <p>
@@ -88,25 +104,33 @@
                 <span class="mx-2">|</span>
 
                 <span id="ver_span"></span>
+				<p id="right_span"></p>
             </p>
             <!-- 声明 -->
             <script type="text/javascript">
-                var site_version = "beta.15.1222";
+                var site_version = "beta.15.20210203";
                 var lang = document.getElementsByTagName("html");
                 var userLang = lang[0].getAttribute("lang");
                 if (userLang.includes("zh")) {
+					stats.innerHTML = "状态";
                     prot_span.innerHTML = "社区规范";
                     rept_span.innerHTML = "违法和不良信息举报";
                     ver_span.innerHTML = "版本 " + site_version;
-                    document.write("<p>本站独立于 Flarum 基金会运行。<a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> 了解官方授权社区</a></p>")
+                    right_span.innerHTML = "本站独立于 Flarum 基金会运行。<a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> 了解官方认证社区</a>";
                 }
                 else {
+					stats.innerHTML = "Status";
                     prot_span.innerHTML = "Protocol";
                     rept_span.innerHTML = "Report";
                     ver_span.innerHTML = "Version " + site_version;
-                    document.write("<p>This site operates independently of the Flarum Foundation. Read more about <a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> verified communities</a>.</p>")
+                   right_span.innerHTML = "This site operates independently of the Flarum Foundation. Read more about <a href=\"https://flarum.org/verified-communities\"><i class=\"fas fa-info-circle\"></i> verified communities</a>.";
                 }
             </script>
+			<p>
+				<a href="https://promotion.aliyun.com/ntms/yunparter/invite.html?userCode=e65tin9w" title="阿里云提供云服务">
+					<img src="https://img.alicdn.com/tfs/TB13DzOjXP7gK0jSZFjXXc5aXXa-212-48.png" alt="阿里云提供云服务" style="max-height: 14px; vertical-align: middle;">
+				</a>
+			</p>
         </div>
     </div>
 </footer>
