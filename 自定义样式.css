@@ -225,7 +225,7 @@ img.block-image {
 	background:#282c34;
 	color:#fff;
 } */
-.Post-body:not(pre) code:not(.hljs) {
+.Post-body :not(pre) code:not(.hljs) {
 	/* 短代码 */
 	/* color: #476582 !important; */
 	padding: .3rem .5rem;

@@ -1,0 +1,208 @@
+pre[class~=language-apache]:before,
+pre[class~=language-apacheconf]:before {
+	content: "apacheconf"
+}
+
+pre[class~=language-sh]:before,
+pre[class~=language-bash]:before,
+pre[class~=language-shell]:before {
+	content: "bash"
+}
+
+pre[class~=language-bbcode]:before,
+pre[class~=language-shortcode]:before {
+	content: "bbcode"
+}
+
+pre[class~=language-c]:before {
+	content: "c"
+}
+
+pre[class~=language-csharp]:before,
+pre[class~=language-cs]:before,
+pre[class~=language-dotnet]:before {
+	content: "csharp"
+}
+
+pre[class~=language-css]:before {
+    content: "css"
+}
+
+pre[class~=language-cpp]:before {
+	content: "cpp"
+}
+
+pre[class~=language-coffeescript]:before,
+pre[class~=language-coffee]:before {
+	content: "coffeescript"
+}
+
+pre[class~=language-diff]:before {
+	content: "diff"
+}
+
+pre[class~=language-django]:before,
+pre[class~=language-jinja2]:before {
+	content: "django"
+}
+
+pre[class~=language-docker]:before,
+pre[class~=language-dockerfile]:before {
+	content: "docker"
+}
+
+pre[class~=language-dockerfile]:before {
+    content: "dockerfile"
+}
+
+pre[class~=language-git]:before {
+	content: "git"
+}
+
+pre[class~=language-go]:before {
+	content: "go"
+}
+
+pre[class~=language-html]:before,
+pre[class~=language-markup]:before {
+    content: "html"
+}
+
+pre[class~=language-http]:before {
+	content: "http"
+}
+
+pre[class~=language-ini]:before {
+	content: "ini"
+}
+
+pre[class~=language-java]:before {
+	content: "java"
+}
+
+pre[class~=language-javadoc]:before {
+	content: "javadoc"
+}
+
+pre[class~=language-js]:before,
+pre[class~=language-javascript]:before {
+    content: "js"
+}
+
+pre[class~=language-json]:before,
+pre[class~=language-webmanifest]:before {
+	content: "json"
+}
+
+pre[class~=language-less]:before {
+	content: "less"
+}
+
+pre[class~=language-lua]:before {
+	content: "lua"
+}
+
+pre[class~=language-makefile]:before {
+	content: "makefile"
+}
+
+pre[class~=language-markdown]:before,
+pre[class~=language-md]:before {
+	content: "markdown"
+}
+
+pre[class~=language-nginx]:before {
+	content: "nginx"
+}
+
+pre[class~=language-objectivec]:before,
+pre[class~=language-objc]:before {
+	content: "objectivec"
+}
+
+pre[class~=language-perl]:before {
+	content: "perl"
+}
+
+pre[class~=language-php]:before {
+	content: "php"
+}
+
+pre[class~=language-powershell]:before {
+	content: "powershell"
+}
+
+pre[class~=language-properties]:before {
+	content: "properties"
+}
+
+pre[class~=language-python]:before,
+pre[class~=language-py]:before {
+	content: "python"
+}
+
+pre[class~=language-python-repl]:before {
+	content: "python-repl"
+}
+
+pre[class~=language-regex]:before {
+	content: "regex"
+}
+
+pre[class~=language-rb]:before,
+pre[class~=language-ruby]:before {
+    content: "ruby"
+}
+
+pre[class~=language-rust]:before {
+	content: "rust"
+}
+
+pre[class~=language-sass]:before {
+	content: "sass"
+}
+
+pre[class~=language-scss]:before {
+	content: "scss"
+}
+
+pre[class~=language-sql]:before {
+	content: "sql"
+}
+
+pre[class~=language-stylus]:before {
+	content: "stylus"
+}
+
+pre[class~=language-swift]:before {
+	content: "swift"
+}
+
+pre[class~=language-typescript]:before,
+pre[class~=language-ts]:before {
+	content: "typescript"
+}
+
+pre[class~=language-vim]:before {
+	content: "vim"
+}
+
+pre[class~=language-visual-basic]:before,
+pre[class~=language-vb]:before,
+pre[class~=language-vba]:before {
+	content: "visual-basic"
+}
+
+pre[class~=language-vue]:before {
+    content: "vue"
+}
+
+pre[class~=language-xml]:before,
+pre[class~=language-xml-doc]:before{
+    content: "xml"
+}
+
+pre[class~=language-yaml]:before,
+pre[class~=language-yml]:before {
+	content: "yaml"
+}

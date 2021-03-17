@@ -12,157 +12,129 @@ code.hljs::before {
 	color: hsla(0, 0%, 100%, .4)
 }
 
-code[class~=language-js]:before,
-code.hljs.js:before {
-	content: "js"
+pre[class~=language-apache]:before {
+    content: "apacheconf"
 }
 
-code[class~=language-ts]:before,
-code.hljs.ts:before {
-	content: "ts"
+pre[class~=language-bbcode]:before,
+pre[class~=language-shortcode]:before {
+    content: "bbcode"
 }
 
-code[class~=language-html]:before,
-code.hljs.html:before {
-	content: "html"
+pre[class~=language-c]:before {
+    content: "c"
 }
 
-code[class~=language-md]:before,
-code.hljs.md:before {
-	content: "md"
+pre[class~=language-coffeescript]:before {
+    content: "coffee"
 }
 
-code[class~=language-vue]:before,
-code.hljs.vue:before {
-	content: "vue"
+pre[class~=language-cpp]:before {
+    content: "cpp"
 }
 
-code[class~=language-css]:before,
-code.hljs.css:before {
-	content: "css"
+pre[class~=language-csharp]:before {
+    content: "cs"
+}
+pre[class~=language-css]:before {
+    content: "css"
 }
 
-code[class~=language-sass]:before,
-code.hljs.sass:before {
-	content: "sass"
+pre[class~=language-docker]:before {
+    content: "docker"
 }
 
-code[class~=language-scss]:before,
-code.hljs.scss:before {
-	content: "scss"
+pre[class~=language-dockerfile]:before {
+    content: "dockerfile"
 }
 
-code[class~=language-less]:before,
-code.hljs.less:before {
-	content: "less"
+pre[class~=language-go]:before {
+    content: "go"
 }
 
-code[class~=language-stylus]:before,
-code.hljs.stylus:before {
-	content: "stylus"
+pre[class~=language-html]:before,
+pre[class~=language-markup]:before {
+    content: "html"
 }
 
-code[class~=language-go]:before,
-code.hljs.go:before {
-	content: "go"
+pre[class~=language-java]:before {
+    content: "java"
 }
 
-code[class~=language-java]:before,
-code.hljs.java:before {
-	content: "java"
+pre[class~=language-js]:before,
+pre[class~=language-javascript]:before {
+    content: "js"
 }
 
-code[class~=language-c]:before,
-code.hljs.c:before {
-	content: "c"
+pre[class~=language-json]:before {
+    content: "json"
 }
 
-code[class~=language-sh]:before,
-code.hljs.sh:before {
-	content: "sh"
+pre[class~=language-less]:before {
+    content: "less"
 }
 
-code[class~=language-bash]:before,
-code.hljs.bash:before {
-	content: "sh"
+pre[class~=language-md]:before,
+pre[class~=language-markdown]:before {
+    content: "md"
 }
 
-code[class~=language-yaml]:before,
-code.hljs.yaml:before {
-	content: "yaml"
+pre[class~=language-makefile]:before {
+    content: "makefile"
 }
 
-code[class~=language-py]:before,
-code.hljs.py:before {
-	content: "py"
+pre[class~=language-nginx]:before{
+    content: "nginx"
 }
 
-code[class~=language-docker]:before,
-code.hljs.docker:before {
-	content: "docker"
+pre[class~=language-php]:before {
+    content: "php"
 }
 
-code[class~=language-dockerfile]:before,
-code.hljs.dockerfile:before {
-	content: "dockerfile"
+pre[class~=language-py]:before,
+pre[class~=language-python]:before {
+    content: "py"
 }
 
-code[class~=language-makefile]:before,
-code.hljs.makefile:before {
-	content: "makefile"
+pre[class~=language-ruby]:before {
+    content: "rb"
 }
 
-code[class~=language-javascript]:before,
-code.hljs.javascript:before {
-	content: "js"
+pre[class~=language-sass]:before {
+    content: "sass"
 }
 
-code[class~=language-typescript]:before,
-code.hljs.typescript:before {
-	content: "ts"
+pre[class~=language-scss]:before {
+    content: "scss"
 }
 
-code[class~=language-markup]:before,
-code.hljs.markup:before {
-	content: "html"
+pre[class~=language-sh]:before,
+pre[class~=language-bash]:before,
+pre[class~=language-shell]:before {
+    content: "sh"
 }
 
-code[class~=language-markdown]:before,
-code.hljs.markdown:before {
-	content: "md"
+pre[class~=language-sql]:before{
+    content: "sql";
 }
 
-code[class~=language-json]:before,
-code.hljs.json:before {
-	content: "json"
+pre[class~=language-stylus]:before {
+    content: "stylus"
 }
 
-code[class~=language-ruby]:before,
-code.hljs.ruby:before {
-	content: "rb"
+pre[class~=language-ts]:before,
+pre[class~=language-typescript]:before {
+    content: "ts"
 }
 
-code[class~=language-python]:before,
-code.hljs.python:before {
-	content: "py"
+pre[class~=language-vue]:before {
+    content: "vue"
 }
 
-code[class~=language-php]:before,
-code.hljs.php:before {
-	content: "php"
+pre[class~=language-xml]:before {
+    content: "xml"
 }
 
-code[class~=language-xml]:before,
-code.hljs.xml:before {
-	content: "xml"
-}
-
-code[class~=language-nginx]:before,
-code.hljs.nginx:before {
-	content: "conf"
-}
-
-code[class~=language-bbcode]:before,
-code.hljs.bbcode:before {
-	content: "bbcode"
+pre[class~=language-yaml]:before {
+    content: "yaml"
 }

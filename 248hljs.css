@@ -1,0 +1,1072 @@
+pre[class~=language-abap]:before {
+	content: "abap"
+}
+
+pre[class~=language-abnf]:before {
+	content: "abnf"
+}
+
+pre[class~=language-actionscript]:before {
+	content: "actionscript"
+}
+
+pre[class~=language-ada]:before {
+	content: "ada"
+}
+
+pre[class~=language-agda]:before {
+	content: "agda"
+}
+
+pre[class~=language-al]:before {
+	content: "al"
+}
+
+pre[class~=language-antlr4]:before,
+pre[class~=language-g4]:before {
+	content: "antlr4"
+}
+
+pre[class~=language-apacheconf]:before {
+	content: "apacheconf"
+}
+
+pre[class~=language-apex]:before {
+	content: "apex"
+}
+
+pre[class~=language-apl]:before {
+	content: "apl"
+}
+
+pre[class~=language-applescript]:before {
+	content: "applescript"
+}
+
+pre[class~=language-aql]:before {
+	content: "aql"
+}
+
+pre[class~=language-arduino]:before {
+	content: "arduino"
+}
+
+pre[class~=language-arff]:before {
+	content: "arff"
+}
+
+pre[class~=language-asciidoc]:before,
+pre[class~=language-adoc]:before {
+	content: "asciidoc"
+}
+
+pre[class~=language-aspnet]:before {
+	content: "aspnet"
+}
+
+pre[class~=language-asm6502]:before {
+	content: "asm6502"
+}
+
+pre[class~=language-autohotkey]:before {
+	content: "autohotkey"
+}
+
+pre[class~=language-autoit]:before {
+	content: "autoit"
+}
+
+pre[class~=language-sh]:before,
+pre[class~=language-bash]:before,
+pre[class~=language-shell]:before {
+	content: "bash"
+}
+
+pre[class~=language-basic]:before {
+	content: "basic"
+}
+
+pre[class~=language-batch]:before {
+	content: "batch"
+}
+
+pre[class~=language-bbcode]:before,
+pre[class~=language-shortcode]:before {
+	content: "bbcode"
+}
+
+pre[class~=language-birb]:before {
+	content: "birb"
+}
+
+pre[class~=language-bison]:before {
+	content: "bison"
+}
+
+pre[class~=language-bnf]:before,
+pre[class~=language-rbnf]:before {
+	content: "bnf"
+}
+
+pre[class~=language-brainfuck]:before {
+	content: "brainfuck"
+}
+
+pre[class~=language-brightscript]:before {
+	content: "brightscript"
+}
+
+pre[class~=language-bro]:before {
+	content: "bro"
+}
+
+pre[class~=language-bsl]:before,
+pre[class~=language-oscript]:before {
+	content: "bsl"
+}
+
+pre[class~=language-c]:before {
+	content: "c"
+}
+
+pre[class~=language-csharp]:before,
+pre[class~=language-cs]:before,
+pre[class~=language-dotnet]:before {
+	content: "csharp"
+}
+
+pre[class~=language-css]:before {
+    content: "css"
+}
+
+pre[class~=language-cpp]:before {
+	content: "cpp"
+}
+
+pre[class~=language-cfscript]:before,
+pre[class~=language-cfc]:before {
+	content: "cfscript"
+}
+
+pre[class~=language-chaiscript]:before {
+	content: "chaiscript"
+}
+
+pre[class~=language-cil]:before {
+	content: "cil"
+}
+
+pre[class~=language-clojure]:before {
+	content: "clojure"
+}
+
+pre[class~=language-cmake]:before {
+	content: "cmake"
+}
+
+pre[class~=language-coffeescript]:before,
+pre[class~=language-coffee]:before {
+	content: "coffeescript"
+}
+
+pre[class~=language-concurnas]:before,
+pre[class~=language-conc]:before {
+	content: "concurnas"
+}
+
+pre[class~=language-csp]:before {
+	content: "csp"
+}
+
+pre[class~=language-crystal]:before {
+	content: "crystal"
+}
+
+pre[class~=language-css-extras]:before {
+	content: "css-extras"
+}
+
+pre[class~=language-cypher]:before {
+	content: "cypher"
+}
+
+pre[class~=language-d]:before {
+	content: "d"
+}
+
+pre[class~=language-dart]:before {
+	content: "dart"
+}
+
+pre[class~=language-dataweave]:before {
+	content: "dataweave"
+}
+
+pre[class~=language-dax]:before {
+	content: "dax"
+}
+
+pre[class~=language-dhall]:before {
+	content: "dhall"
+}
+
+pre[class~=language-diff]:before {
+	content: "diff"
+}
+
+pre[class~=language-django]:before,
+pre[class~=language-jinja2]:before {
+	content: "django"
+}
+
+pre[class~=language-dns-zone-file]:before,
+pre[class~=language-dns-zone]:before {
+	content: "dns-zone-file"
+}
+
+pre[class~=language-docker]:before,
+pre[class~=language-dockerfile]:before {
+	content: "docker"
+}
+
+pre[class~=language-dockerfile]:before {
+    content: "dockerfile"
+}
+
+pre[class~=language-dot]:before,
+pre[class~=language-gv]:before {
+	content: "dot"
+}
+
+pre[class~=language-ebnf]:before {
+	content: "ebnf"
+}
+
+pre[class~=language-editorconfig]:before {
+	content: "editorconfig"
+}
+
+pre[class~=language-eiffel]:before {
+	content: "eiffel"
+}
+
+pre[class~=language-ejs]:before,
+pre[class~=language-eta]:before {
+	content: "ejs"
+}
+
+pre[class~=language-elixir]:before {
+	content: "elixir"
+}
+
+pre[class~=language-elm]:before {
+	content: "elm"
+}
+
+pre[class~=language-etlua]:before {
+	content: "etlua"
+}
+
+pre[class~=language-erb]:before {
+	content: "erb"
+}
+
+pre[class~=language-erlang]:before {
+	content: "erlang"
+}
+
+pre[class~=language-excel-formula]:before,
+pre[class~=language-xlsx]:before,
+pre[class~=language-xls]:before {
+	content: "excel-formula"
+}
+
+pre[class~=language-fsharp]:before {
+	content: "fsharp"
+}
+
+pre[class~=language-factor]:before {
+	content: "factor"
+}
+
+pre[class~=language-firestore-security-rules]:before {
+	content: "firestore-security-rules"
+}
+
+pre[class~=language-flow]:before {
+	content: "flow"
+}
+
+pre[class~=language-fortran]:before {
+	content: "fortran"
+}
+
+pre[class~=language-ftl]:before {
+	content: "ftl"
+}
+
+pre[class~=language-gml]:before,
+pre[class~=language-gamemakerlanguage]:before {
+	content: "gml"
+}
+
+pre[class~=language-gcode]:before {
+	content: "gcode"
+}
+
+pre[class~=language-gdscript]:before {
+	content: "gdscript"
+}
+
+pre[class~=language-gedcom]:before {
+	content: "gedcom"
+}
+
+pre[class~=language-gherkin]:before {
+	content: "gherkin"
+}
+
+pre[class~=language-git]:before {
+	content: "git"
+}
+
+pre[class~=language-glsl]:before {
+	content: "glsl"
+}
+
+pre[class~=language-go]:before {
+	content: "go"
+}
+
+pre[class~=language-graphql]:before {
+	content: "graphql"
+}
+
+pre[class~=language-groovy]:before {
+	content: "groovy"
+}
+
+pre[class~=language-haml]:before {
+	content: "haml"
+}
+
+pre[class~=language-handlebars]:before {
+	content: "handlebars"
+}
+
+pre[class~=language-haskell]:before,
+pre[class~=language-hs]:before {
+	content: "haskell"
+}
+
+pre[class~=language-haxe]:before {
+	content: "haxe"
+}
+
+pre[class~=language-hcl]:before {
+	content: "hcl"
+}
+
+pre[class~=language-hlsl]:before {
+	content: "hlsl"
+}
+
+pre[class~=language-html]:before,
+pre[class~=language-markup]:before {
+    content: "html"
+}
+
+pre[class~=language-http]:before {
+	content: "http"
+}
+
+pre[class~=language-hpkp]:before {
+	content: "hpkp"
+}
+
+pre[class~=language-hsts]:before {
+	content: "hsts"
+}
+
+pre[class~=language-ichigojam]:before {
+	content: "ichigojam"
+}
+
+pre[class~=language-icon]:before {
+	content: "icon"
+}
+
+pre[class~=language-idris]:before,
+pre[class~=language-idr]:before {
+	content: "idris"
+}
+
+pre[class~=language-ignore]:before,
+pre[class~=language-gitignore]:before,
+pre[class~=language-hgignore]:before,
+pre[class~=language-npmignore]:before {
+	content: "ignore"
+}
+
+pre[class~=language-inform7]:before {
+	content: "inform7"
+}
+
+pre[class~=language-ini]:before {
+	content: "ini"
+}
+
+pre[class~=language-io]:before {
+	content: "io"
+}
+
+pre[class~=language-j]:before {
+	content: "j"
+}
+
+pre[class~=language-java]:before {
+	content: "java"
+}
+
+pre[class~=language-javadoc]:before {
+	content: "javadoc"
+}
+
+pre[class~=language-javadoclike]:before {
+	content: "javadoclike"
+}
+
+pre[class~=language-javastacktrace]:before {
+	content: "javastacktrace"
+}
+
+pre[class~=language-jolie]:before {
+	content: "jolie"
+}
+
+pre[class~=language-jq]:before {
+	content: "jq"
+}
+
+pre[class~=language-js]:before,
+pre[class~=language-javascript]:before {
+    content: "js"
+}
+
+pre[class~=language-jsdoc]:before {
+	content: "jsdoc"
+}
+
+pre[class~=language-js-extras]:before {
+	content: "js-extras"
+}
+
+pre[class~=language-json]:before,
+pre[class~=language-webmanifest]:before {
+	content: "json"
+}
+
+pre[class~=language-json5]:before {
+	content: "json5"
+}
+
+pre[class~=language-jsonp]:before {
+	content: "jsonp"
+}
+
+pre[class~=language-jsstacktrace]:before {
+	content: "jsstacktrace"
+}
+
+pre[class~=language-js-templates]:before {
+	content: "js-templates"
+}
+
+pre[class~=language-julia]:before {
+	content: "julia"
+}
+
+pre[class~=language-keyman]:before {
+	content: "keyman"
+}
+
+pre[class~=language-kotlin]:before,
+pre[class~=language-kt]:before,
+pre[class~=language-kts]:before {
+	content: "kotlin"
+}
+
+pre[class~=language-kumir]:before,
+pre[class~=language-kum]:before {
+	content: "kumir"
+}
+
+pre[class~=language-latex]:before,
+pre[class~=language-tex]:before,
+pre[class~=language-context]:before {
+	content: "latex"
+}
+
+pre[class~=language-latte]:before {
+	content: "latte"
+}
+
+pre[class~=language-less]:before {
+	content: "less"
+}
+
+pre[class~=language-lilypond]:before,
+pre[class~=language-ly]:before {
+	content: "lilypond"
+}
+
+pre[class~=language-liquid]:before {
+	content: "liquid"
+}
+
+pre[class~=language-lisp]:before,
+pre[class~=language-emacs]:before,
+pre[class~=language-elisp]:before,
+pre[class~=language-emacs-lisp]:before {
+	content: "lisp"
+}
+
+pre[class~=language-livescript]:before {
+	content: "livescript"
+}
+
+pre[class~=language-llvm]:before {
+	content: "llvm"
+}
+
+pre[class~=language-lolcode]:before {
+	content: "lolcode"
+}
+
+pre[class~=language-lua]:before {
+	content: "lua"
+}
+
+pre[class~=language-makefile]:before {
+	content: "makefile"
+}
+
+pre[class~=language-markdown]:before,
+pre[class~=language-md]:before {
+	content: "markdown"
+}
+
+pre[class~=language-markup-templating]:before {
+	content: "markup-templating"
+}
+
+pre[class~=language-matlab]:before {
+	content: "matlab"
+}
+
+pre[class~=language-mel]:before {
+	content: "mel"
+}
+
+pre[class~=language-mizar]:before {
+	content: "mizar"
+}
+
+pre[class~=language-mongodb]:before {
+	content: "mongodb"
+}
+
+pre[class~=language-monkey]:before {
+	content: "monkey"
+}
+
+pre[class~=language-moonscript]:before,
+pre[class~=language-moon]:before {
+	content: "moonscript"
+}
+
+pre[class~=language-n1ql]:before {
+	content: "n1ql"
+}
+
+pre[class~=language-n4js]:before,
+pre[class~=language-n4jsd]:before {
+	content: "n4js"
+}
+
+pre[class~=language-nand2tetris-hdl]:before {
+	content: "nand2tetris-hdl"
+}
+
+pre[class~=language-naniscript]:before,
+pre[class~=language-nani]:before {
+	content: "naniscript"
+}
+
+pre[class~=language-nasm]:before {
+	content: "nasm"
+}
+
+pre[class~=language-neon]:before {
+	content: "neon"
+}
+
+pre[class~=language-nginx]:before {
+	content: "nginx"
+}
+
+pre[class~=language-nim]:before {
+	content: "nim"
+}
+
+pre[class~=language-nix]:before {
+	content: "nix"
+}
+
+pre[class~=language-nsis]:before {
+	content: "nsis"
+}
+
+pre[class~=language-objectivec]:before,
+pre[class~=language-objc]:before {
+	content: "objectivec"
+}
+
+pre[class~=language-ocaml]:before {
+	content: "ocaml"
+}
+
+pre[class~=language-opencl]:before {
+	content: "opencl"
+}
+
+pre[class~=language-oz]:before {
+	content: "oz"
+}
+
+pre[class~=language-parigp]:before {
+	content: "parigp"
+}
+
+pre[class~=language-parser]:before {
+	content: "parser"
+}
+
+pre[class~=language-pascal]:before,
+pre[class~=language-objectpascal]:before {
+	content: "pascal"
+}
+
+pre[class~=language-pascaligo]:before {
+	content: "pascaligo"
+}
+
+pre[class~=language-psl]:before {
+	content: "psl"
+}
+
+pre[class~=language-pcaxis]:before,
+pre[class~=language-px]:before {
+	content: "pcaxis"
+}
+
+pre[class~=language-peoplecode]:before,
+pre[class~=language-pcode]:before {
+	content: "peoplecode"
+}
+
+pre[class~=language-perl]:before {
+	content: "perl"
+}
+
+pre[class~=language-php]:before {
+	content: "php"
+}
+
+pre[class~=language-phpdoc]:before {
+	content: "phpdoc"
+}
+
+pre[class~=language-php-extras]:before {
+	content: "php-extras"
+}
+
+pre[class~=language-php-template]:before {
+	content: "php-template"
+}
+
+pre[class~=language-plsql]:before {
+	content: "plsql"
+}
+
+pre[class~=language-powerquery]:before,
+pre[class~=language-pq]:before,
+pre[class~=language-mscript]:before {
+	content: "powerquery"
+}
+
+pre[class~=language-powershell]:before {
+	content: "powershell"
+}
+
+pre[class~=language-processing]:before {
+	content: "processing"
+}
+
+pre[class~=language-prolog]:before {
+	content: "prolog"
+}
+
+pre[class~=language-promql]:before {
+	content: "promql"
+}
+
+pre[class~=language-properties]:before {
+	content: "properties"
+}
+
+pre[class~=language-protobuf]:before {
+	content: "protobuf"
+}
+
+pre[class~=language-pug]:before {
+	content: "pug"
+}
+
+pre[class~=language-puppet]:before {
+	content: "puppet"
+}
+
+pre[class~=language-pure]:before {
+	content: "pure"
+}
+
+pre[class~=language-purebasic]:before,
+pre[class~=language-pbfasm]:before {
+	content: "purebasic"
+}
+
+pre[class~=language-purescript]:before,
+pre[class~=language-purs]:before {
+	content: "purescript"
+}
+
+pre[class~=language-python]:before,
+pre[class~=language-py]:before {
+	content: "python"
+}
+
+pre[class~=language-python-repl]:before {
+	content: "python-repl"
+}
+
+pre[class~=language-q]:before {
+	content: "q"
+}
+
+pre[class~=language-qml]:before {
+	content: "qml"
+}
+
+pre[class~=language-qore]:before {
+	content: "qore"
+}
+
+pre[class~=language-r]:before {
+	content: "r"
+}
+
+pre[class~=language-racket]:before,
+pre[class~=language-rkt]:before {
+	content: "racket"
+}
+
+pre[class~=language-jsx]:before {
+	content: "jsx"
+}
+
+pre[class~=language-tsx]:before {
+	content: "tsx"
+}
+
+pre[class~=language-r]:before {
+	content: "r"
+}
+
+pre[class~=language-reason]:before {
+	content: "reason"
+}
+
+pre[class~=language-regex]:before {
+	content: "regex"
+}
+
+pre[class~=language-renpy]:before,
+pre[class~=language-rpy]:before {
+	content: "renpy"
+}
+
+pre[class~=language-rest]:before {
+	content: "rest"
+}
+
+pre[class~=language-rip]:before {
+	content: "rip"
+}
+
+pre[class~=language-roboconf]:before {
+	content: "roboconf"
+}
+
+pre[class~=language-robotframework]:before,
+pre[class~=language-robot]:before {
+	content: "robotframework"
+}
+
+pre[class~=language-ruby]:before,
+pre[class~=language-rb]:before {
+	content: "ruby"
+}
+
+pre[class~=language-rust]:before {
+	content: "rust"
+}
+
+pre[class~=language-sas]:before {
+	content: "sas"
+}
+
+pre[class~=language-sass]:before {
+	content: "sass"
+}
+
+pre[class~=language-scss]:before {
+	content: "scss"
+}
+
+pre[class~=language-scala]:before {
+	content: "scala"
+}
+
+pre[class~=language-scheme]:before {
+	content: "scheme"
+}
+
+pre[class~=language-shell-session]:before,
+pre[class~=language-sh-session]:before,
+pre[class~=language-shellsession]:before {
+	content: "shell-session"
+}
+
+pre[class~=language-smali]:before {
+	content: "smali"
+}
+
+pre[class~=language-smalltalk]:before {
+	content: "smalltalk"
+}
+
+pre[class~=language-smarty]:before {
+	content: "smarty"
+}
+
+pre[class~=language-sml]:before,
+pre[class~=language-smlnj]:before {
+	content: "sml"
+}
+
+pre[class~=language-solidity]:before,
+pre[class~=language-sol]:before {
+	content: "solidity"
+}
+
+pre[class~=language-solution-file]:before,
+pre[class~=language-sln]:before {
+	content: "solution-file"
+}
+
+pre[class~=language-soy]:before {
+	content: "soy"
+}
+
+pre[class~=language-sparql]:before,
+pre[class~=language-rq]:before {
+	content: "sparql"
+}
+
+pre[class~=language-splunk-spl]:before {
+	content: "splunk-spl"
+}
+
+pre[class~=language-sqf]:before {
+	content: "sqf"
+}
+
+pre[class~=language-sql]:before {
+	content: "sql"
+}
+
+pre[class~=language-squirrel]:before {
+	content: "squirrel"
+}
+
+pre[class~=language-stan]:before {
+	content: "stan"
+}
+
+pre[class~=structured-text]:before,
+pre[class~=language-iecst]:before {
+	content: "iecst"
+}
+
+pre[class~=language-stylus]:before {
+	content: "stylus"
+}
+
+pre[class~=language-swift]:before {
+	content: "swift"
+}
+
+pre[class~=language-t4-templating]:before {
+	content: "t4-templating"
+}
+
+pre[class~=language-t4-cs]:before,
+pre[class~=language-t4]:before {
+	content: "t4-cs"
+}
+
+pre[class~=language-t4-vb]:before {
+	content: "t4-vb"
+}
+
+pre[class~=language-tap]:before {
+	content: "tap"
+}
+
+pre[class~=language-tcl]:before {
+	content: "tcl"
+}
+
+pre[class~=language-tt2]:before {
+	content: "tt2"
+}
+
+pre[class~=language-textile]:before {
+	content: "textile"
+}
+
+pre[class~=language-toml]:before {
+	content: "toml"
+}
+
+pre[class~=language-turtle]:before,
+pre[class~=language-trig]:before {
+	content: "turtle"
+}
+
+pre[class~=language-twig]:before {
+	content: "twig"
+}
+
+pre[class~=language-typescript]:before,
+pre[class~=language-ts]:before {
+	content: "typescript"
+}
+
+pre[class~=language-typoscript]:before,
+pre[class~=language-tsconfig]:before {
+	content: "typoscript"
+}
+
+pre[class~=language-unrealscript]:before,
+pre[class~=language-uscript]:before,
+pre[class~=language-uc]:before {
+	content: "unrealscript"
+}
+
+pre[class~=language-uri]:before,
+pre[class~=language-url]:before {
+	content: "uri"
+}
+
+pre[class~=language-v]:before {
+	content: "v"
+}
+
+pre[class~=language-vala]:before {
+	content: "vala"
+}
+
+pre[class~=language-vbnet]:before {
+	content: "vbnet"
+}
+
+pre[class~=language-velocity]:before {
+	content: "velocity"
+}
+
+pre[class~=language-verilog]:before {
+	content: "verilog"
+}
+
+pre[class~=language-vhdl]:before {
+	content: "vhdl"
+}
+
+pre[class~=language-vim]:before {
+	content: "vim"
+}
+
+pre[class~=language-visual-basic]:before,
+pre[class~=language-vb]:before,
+pre[class~=language-vba]:before {
+	content: "visual-basic"
+}
+
+pre[class~=language-vue]:before {
+    content: "vue"
+}
+
+pre[class~=language-warpscript]:before {
+	content: "warpscript"
+}
+
+pre[class~=language-wasm]:before {
+	content: "wasm"
+}
+
+pre[class~=language-wiki]:before {
+	content: "wiki"
+}
+
+pre[class~=language-xeora]:before,
+pre[class~=language-xeoracube]:before {
+	content: "xeora"
+}
+
+pre[class~=language-xml]:before,
+pre[class~=language-xml-doc]:before{
+    content: "xml"
+}
+
+pre[class~=language-xojo]:before {
+	content: "xojo"
+}
+
+pre[class~=language-xquery]:before {
+	content: "xquery"
+}
+
+pre[class~=language-yaml]:before,
+pre[class~=language-yml]:before {
+	content: "yaml"
+}
+
+pre[class~=language-yang]:before {
+	content: "yang"
+}
+
+pre[class~=language-zig]:before {
+	content: "zig"
+}
