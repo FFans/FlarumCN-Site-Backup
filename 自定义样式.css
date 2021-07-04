@@ -1,3 +1,5 @@
+
+
 /* 社区展 */
 .App-content .Pages-container {
 	width:100%;
@@ -198,7 +200,7 @@ body video {
 	font-weight:600;
 	content:"\f111";
 	color:#667c99;
-	margin-left:2px;
+	margin-left:0;
 	margin-top:-6px;
 	transform:scale(0.5);
 	position:absolute;
@@ -319,8 +321,8 @@ legend {
     & a{ color: white; }
 }
 /* 占位 */
-/*.IndexPage-toolbar::after {
-    content: "Beta 15 及 Sticky 扩展发布安全更新，详情查看置顶主题。";
+.IndexPage-toolbar::after {
+    content: "\65e7\7248\672c\5347\7ea7\524d\ff0c\8bf7\63d0\524d\5907\4efd\6570\636e\5e93\548c\76f8\5173\5185\5bb9\ff01";
     padding: 3px 5px 3px 5px;
     background-color: @hero-bg;
     color: @link-color;
@@ -330,7 +332,7 @@ legend {
     display: block;
     margin: 5px 0;
     white-space: pre-wrap;
-}*/
+}
 .RemoveAnnounce::after {
     content: "";
     display: none;
@@ -378,10 +380,31 @@ body{font-family:'Microsoft YaHei',"Open Sans","Clear Sans","Helvetica Neue",Hel
 .DiscussionListItem-author{display:none}
 .DiscussionPage-list .DiscussionListItem-content{padding-left:8px;padding-right:15px}
 .DiscussionListItem-content{padding-left:5px;padding-right:5px}
-.DiscussionListItem-count{display:none}
+
+.DiscussionPage-list .DiscussionListItem-count,.UserPage .DiscussionListItem-count{display:none}
+.DiscussionListItem-count{/*display:none*/margin: unset;
+    margin-top: 5px !important;padding-left: unset;
+    width: auto;}
+
+
+.IndexPage span.username:before {
+    content: '\0040';
+}
+.DiscussionListItem-count:before{
+
+content: "\8bc4\8bba\6570\0020";
+padding-right: 2px;}
+.unread .DiscussionListItem-count:before {
+    font-weight: 400;
+    content: "\65b0\8bc4\8bba";
+}
 .DiscussionHero-items{text-align:left}
 .DiscussionListItem-badges{float:right}
-.IndexPage .DiscussionListItem-badges{margin-top:5px}
+.IndexPage .DiscussionListItem-badges{    margin-top: 62px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	width: 15px;}
 .PostUser-badges{float:right;position:initial}
 .Badge{margin:2px!important;width:auto;height:auto;background:0 0;color:#276bb0;display:unset;vertical-align:middle;text-align:center;-webkit-box-shadow:none;box-shadow:none}
 span.Badge{background:0 0!important}
@@ -397,7 +420,7 @@ h2.DiscussionHero-title{color:@muted-color}
 .DiscussionPage-list .DiscussionListItem-info>li,.UserPage .DiscussionListItem-info>li{display:none}
 .DiscussionPage-list .DiscussionListItem-badges{float:left;padding-right:3px;margin-left:4px;width:auto}
 .affix .DiscussionPage-list{overflow-x:hidden}
-.affix .App-header{border-top:3px solid @config-primary-color}
+.DiscussionListItem-info .username{color:@hero-color}
 .EventPost-icon{text-align:end;width:77px;margin-top:2px;font-size:14px}
 .darkenBackground .UserCard-profile i.icon{color:#fff}
 .PostUser-avatar{vertical-align:middle;position:relative;left:-7px;top:-2px;width:2.5em;height:2.5em;font-size:1em;line-height:2.5em}
@@ -405,7 +428,7 @@ h2.DiscussionHero-title{color:@muted-color}
 .PostUser-avatar{border-width:2px!important}
 .PostStream-timeGap{padding:10px}
 .unread .DiscussionListItem-title:after{font-weight:500;content:'New';color:#f26c4f;transform:scale(.6)}
-.item-discussion-views,.item-discussion-views:before{content:' · 查看'!important;color:@muted-more-color!important;font-size:12px!important}
+.item-discussion-views,.item-discussion-views:before{content:' · \67e5\770b'!important;color:@muted-more-color!important;font-size:12px!important}
 .UserPage .PostsUserPage-discussion a{font-style:normal;font-size:18px;background:@body-bg;margin-left:-20px}
 .UserPage .Post-header{display:none}
 .PostsUserPage .PostsUserPage-list .Post{padding:0 0 10px 18px}
@@ -423,10 +446,12 @@ i.icon.fas.fa-times{display:inline-block}
 .IndexPage-results.sideNavOffset .DiscussionList.DiscussionList--searchResults li.item-discussion-views{display:none}
 /*}*/
 @media (max-width:767px){
+.IndexPage .DiscussionListItem-badges,.IndexPage .DiscussionListItem-count{display:none}
+.IndexPage .DiscussionListItem-info>.item-tags, .UserPage .DiscussionListItem-info>.item-tags{display: contents;}
 .DiscussionListItem-content{padding-left:20px;padding-right:20px}
 .IndexPage .DiscussionListItem-info>.item-tags{margin-top:unset}
 .IndexPage .DiscussionListItem-title{margin-right:auto}
-.item-discussion-views{background:@body-bg!important}
+.item-discussion-views{background:none!important}
 }
 .DiscussionList:not(.DiscussionList--searchResults) .unread .DiscussionListItem-title{font-weight:500}
 .NotificationsDropdown-unread,.new .NotificationsDropdown-unread{background:@muted-color!important}
@@ -435,6 +460,10 @@ i.icon.fas.fa-times{display:inline-block}
 .UserPage .SettingsPage .Button--primary.active,.UserPage .SettingsPage .Button--primary:active,.UserPage .SettingsPage .Button:focus,.UserPage .SettingsPage .Button:hover,.UserPage .SettingsPage .open>.Dropdown-toggle.Button,.UserPage .SettingsPage .open>.Dropdown-toggle.Button--primary{background:@config-primary-color!important}
 
 
+.aaalert.aaquote .aainner{background:fade(@control-bg,50%)!important}
+span.NotificationsDropdown-unread { z-index: 999; }
+/*.affix .App-header{border-top:3px solid @config-primary-color;box-shadow: 0px 2px 10px 0px #e2e2e2, 0 1px #cacaca;}*/
+
 /*---------------------Yannis 样式调整结束--2021-3-15----------------------------*/
 
 /*.Hero{background:#ececef url(https://flarum.csur.fun/2020-11-01/1604213110-718167-9fc08cd5-9582-4b21-857f-52d8731fb4f0.png) no-repeat 35px bottom;}*/
@@ -442,3 +471,4 @@ i.icon.fas.fa-times{display:inline-block}
 /*.Scrubber-handle {
     background: url(https://flarum.csur.fun/2021-03-15/1615806146-890950-e562eae2-be93-4f98-92ec-1feeb668bf50.png) no-repeat center right;
 }*/
+
