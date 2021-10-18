@@ -1,0 +1,403 @@
+/* 社区展 */
+.App-content .Pages-container {
+	width:100%;
+	max-width:100%;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+/* 17年备份 */
+.qrcode {
+	position:fixed;
+	right:20px;
+	bottom:40px;
+	border:1px solid #DDD;
+	padding:5px;
+	background:#FFF;
+	text-align:center;
+	border-radius:2px;
+	z-index:1000;
+}
+@media (max-width:991px) {
+	.qrcode {
+	display:none !important;
+}
+}.upyun {
+	font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+	font-size:16px;
+	text-align:center;
+	height:45px;
+	line-height:45px;
+}
+.upyun img {
+	vertical-align:middle;
+}
+
+/* 横幅 */
+.Hero-close {
+	display:none;
+}
+/* 固定左侧标签栏 */
+@media (min-width:992px) {
+	.sideNav,.sideNav>ul {
+	width:190px;
+	position:sticky;
+	top:80px;
+}
+.App {
+	overflow-x:visible;
+}
+/* 版块页不受影响 */
+	.CategoriesPage.TagsPage .sideNav,.CategoriesPage.TagsPage .sideNav>ul {
+	position:unset;
+}
+/* 标签页不受影响 */
+	.TagsPage.TagsPage .sideNav,.TagsPage.TagsPage .sideNav>ul {
+	position:unset;
+}
+}/* 导航栏位置调整 */
+@media (max-width:1120px) and (min-width:768px) {
+	.App-header .container {
+	width:auto;
+}
+}@media (max-width:1051px) and (min-width:991px) {
+	.Header-controls .Search:not(.focused) .Search-input {
+	max-width:166px;
+	-webkit-transition:all .4s;
+	-o-transition:all .4s;
+	transition:all .4s;
+}
+}/* 标签页表单位移修复 */
+@media (min-width:768px) {
+	.TagDiscussionModal .Modal-content,.TagDiscussionModal .TagsInput {
+	overflow:unset;
+}
+}@media(max-width:767px) {
+	.TagsInput input {
+	width:0% !important;
+}
+}/* 编辑器标题位置 */
+.ComposerBody-content .ComposerBody-header h3 input {
+	width:470px;
+}
+/* 许可证 */
+li.item-littlegolden-post-license {
+	margin-left:10px;
+	& .Form-group>label {
+	display:none;
+}
+}/* 视频宽度 */
+body video {
+	max-width:-webkit-fill-available;
+	/* Chrome 内核浏览器 */ 
+    max-width:-moz-available;
+	/* 火狐内核浏览*/
+    display:inline-block;
+	vertical-align:baseline;
+	width:100%;
+}
+/* 会员名录页,首页加载更多按钮尺寸 */
+.UserDirectoryList-loadMore .Button,.DiscussionList-loadMore .Button {
+	width:50%;
+	border-radius:30px;
+	margin-top:30px;
+}
+.UserDirectoryList-loadMore {
+	text-align:center;
+}
+@media (max-width:767px) {
+	.DiscussionList-loadMore {
+	padding-left:15px;
+	padding-right:15px;
+}
+}/* 替换点赞,回复按钮 */
+.item-like .Button--link .Button-label,.item-reply .Button--link .Button-label {
+	display:none;
+}
+.item-like .Button:before {
+	font-family:'Font Awesome 5 Free';
+	font-weight:600;
+	font-size:14px;
+	content:'\f164';
+	vertical-align:-1px;
+}
+.item-reply .Button--link:before {
+	font-family:'Font Awesome 5 Free';
+	font-weight:600;
+	font-size:15px;
+	content:'\f3e5';
+	margin-right:4px;
+	vertical-align:-2px;
+}
+/* 首页主题点击量对齐 */
+/*@media (min-width:768px) {
+	.IndexPage li.item-discussion-views {
+	margin-right:-38px!important;
+	width:55px;
+	color: #808080
+}
+}*/
+/* 暂时修复 FancyBox 导致的 shield 图标显示异常 */
+.CommentPost.Post img.inline-image {
+	padding:0;
+	border-radius:0;
+	width:auto;
+	margin-left:0;
+	margin-right:0;
+	/*pointer-events:none;
+	*/
+    background:none;
+}
+.CommentPost.Post a.inline-image-link,.CommentPost.Post a.block-image-link {
+	border-bottom:1px solid #e7edf3;
+	padding:0;
+	margin-left:0;
+	margin-right:0;
+	border-radius:0;
+	background:none;
+	display:inline-block;
+}
+.CommentPost.Post a.inline-image-link:hover,.CommentPost.Post a.block-image-link:hover {
+	border-color:#f36322;
+}
+.CommentPost.Post a.inline-image-link img {
+	top:0;
+}
+.CommentPost.Post a.inline-image-link .extlink-badge,.CommentPost.Post a.block-image-link .extlink-badge {
+	display:none;
+}
+.CommentPost.Post a.block-image-link img {
+	width:auto;
+	margin-bottom:6px;
+}
+/* 灯箱文字 */
+.fancybox-infobar {
+	color:#fff !important;
+}
+/* 反应按钮位置 */
+.Post-actions .Reactions .Reactions--ShowReactions {
+	margin-top:11px;
+}
+/* 表格阴影去除 */
+.Post .Post-body table {
+	box-shadow:none;
+}
+.IndexPage .DiscussionListItem,.UserPage .DiscussionListItem,.DiscussionPage-discussion .DiscussionListItem {
+	transition:all 0.1s;
+}
+
+/* 2020-3-7 */
+
+/* 私人讨论成员名颜色 */
+.Hero span.RecipientLabel-text {
+	color:#FFF;
+}
+/* 未读 */
+.unread .DiscussionListItem-title:after {
+	font-family:"Font Awesome 5 Free";
+	font-weight:600;
+	content:"\f111";
+	color:#667c99;
+	margin-left:0;
+	margin-top:-6px;
+	transform:scale(0.5);
+	position:absolute;
+}
+.PostsUserPage .PostsUserPage-list .Post {
+	padding-top:20px;
+}
+/* 图片大小调整 */
+img.block-image {
+	/*max-width:200px;
+	*/
+    min-width:auto !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+.Post div img.block-image {
+    display: unset;
+    background: none;
+}
+/* .Post-body pre {
+	/* 代码块 *//*
+	background:#282c34;
+	color:#fff;
+} */
+.Post-body :not(pre) code:not(.hljs) {
+	/* 短代码 */
+	/* color: #476582 !important; */
+	padding: .3rem .5rem;
+	/* background-color: rgba(27, 31, 35, 0.05) !important; */
+}
+/* 页脚 */
+.site-footer {
+	margin:0;
+	/*margin-top:64px;*/
+	padding-top:30px;
+	padding-bottom:30px;
+	color:hsla(0,0%,100%,.9);
+	box-sizing:inherit;
+	text-align:center;
+	font-size:1em
+}
+@media (max-width:991px){
+    .site-footer {
+	padding-top:0px;
+    }
+}
+.site-footer p {
+	margin:0
+}
+.rm-link-color > p > a {
+	text-decoration:none;
+	color:#89898c
+}
+.rm-link-color > p > a:hover {
+	text-decoration:underline
+}
+
+/*-------- 2020-8-11--------*/
+
+/*付费图标*/
+i.icon.fas.fa-premium:before{content:"";background:url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN@0.1.3/img/premium21.svg);position:relative;display:block;width:1.2em;height:1.2em;background-size: contain;}
+i.icon.fas.fa-premium {vertical-align: middle;}
+
+.Post>li>img.inline-image{max-height:auto !important;max-width:auto !important;}
+
+/* 精华 */
+.Badge--frontpage {
+  background: #fbbd08!important;
+}
+.fa-medal:before {
+    content: "\f091"!important;
+}
+
+/* logo调整 */
+.Header-logo {
+    max-height: 40px !important;
+}
+
+/* 在线人数 */
+fieldset.OnlineUsers{
+    font-size: 14px;
+}
+legend {
+    float: left;
+    margin-right: 1em;
+}
+
+/* 认证图标 */
+@media (max-width:767px) {
+    div#header-secondary:after {
+    content: "";
+    background: url(https://goldenjin.oss-cn-shanghai.aliyuncs.com/verified-community.svg);
+    display: block;
+    width: 19em;
+    height: 6em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-align: center;
+    margin: 1em auto;
+    user-select: none;
+    user-drag: none;
+    -webkit-user-drag: none;
+    }
+    .item-flagrow-ad{display:none;}
+}
+
+/* 公告 */
+.announcement {
+    padding: 6px;
+    background-color: @config-primary-color;
+    color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    margin: 5px 0;
+    white-space: pre-wrap;
+    & a{ color: white; }
+}
+/* 占位 */
+.IndexPage-toolbar::after {
+    /*content: "\6d4b\8bd5\7248\5347\7ea7\81f3\6b63\5f0f\7248\524d\ff0c\8bf7\5907\4efd\6570\636e\5e93\548c\76f8\5173\5185\5bb9\ff0c\5e76\9075\5faa\5b98\65b9\5347\7ea7\65b9\6cd5\ff01";*/
+    /*content: "\670d\52a1\5668\7ef4\62a4\4e2d\ff0c\6682\65f6\5173\95ed\6ce8\518c\3001\53d1\5e16\3001\8bc4\8bba\7b49\529f\80fd";*/
+    padding: 3px 5px 3px 5px;
+    background-color: @hero-bg;
+    /*color: @link-color;*/
+    color: #de0b0b;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+    margin: 5px 0;
+    white-space: pre-wrap;
+}
+.RemoveAnnounce::after {
+    content: "";
+    display: none;
+}
+
+/* hashtag */
+a.tagPhrase::before{
+	content: "#";
+}
+
+/* 2021-3-17 原生优化 */
+.SettingsPage fieldset>ul{
+	clear: both;
+}
+
+.DiscussionListItem-title mark{
+    background: #FFE300;
+    padding: 0px 5px;
+    margin-right: 2px;
+}
+
+/* 主题列表三点菜单 */
+.IndexPage .DiscussionListItem-controls i.icon.fas.fa-ellipsis-v.Button-icon {
+    margin-left: unset;
+}
+.IndexPage .IndexPage-results .DiscussionList-discussions .Button:hover{
+    background-color: #d1e0f0 !important;
+}
+/*--yannis微调开始----*/
+.AchievementsList .Achievement--Icon{float:right!important;}
+.AchievementsList-description{margin-left:unset!important;}
+.fa-mug-hot:before{color:#b59e8c}
+.fa-pepper-hot:before{color:#f3201a}
+.Afrux-NewsWidget-icon{display:none}
+.Afrux-NewsWidget-content{justify-content:center}
+.Afrux-NewsWidget-line-container{justify-items:center}
+.topicStarter{font-size:14px!important;display:contents!important;color:unset!important;}
+@media (min-width:426px){}
+
+
+.fly-fish{
+    z-index: -1;
+    line-height: 0px;
+    height: 350px;
+}
+footer{
+    position: relative;
+}
+.site-footer{
+    position: absolute;
+    width: 100%;
+    top: calc(100% / 4 * 3);
+    transform: translateY(calc(-50% + 10%));
+    padding: 0;
+}
+
+.App{
+    padding-bottom: 0;
+}
+@media (max-width: 767px){
+    .App{
+        padding-bottom: 0;
+    }
+    .App-content {
+        padding-bottom: 0;
+    }
+}
+/*--yannis微调结束---*/
