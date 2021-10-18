@@ -3,11 +3,13 @@
 <script>
     document.addEventListener('click', event => {
         let t = event.target;
-        if (t.matches('.Post-body a[target="_blank"]')) {
+        if (t.matches('.Post-body a')) {
             let url = new URL(t.href);
             if (url.origin == document.location.origin) {
                 t.removeAttribute('target');
                 t.removeAttribute('rel');
+            }else{
+                t.setAttribute('target', '_blank');
             }
         }
     }, false);
