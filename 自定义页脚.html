@@ -1,33 +1,4 @@
 <!doctype html>
-<!-- 公告 -->
-<script type="text/javascript">
-    window.onload = function () {
-        var vcurrent = document.getElementsByClassName("IndexPage-toolbar")[0];
-        //下面
-        var newNodeBottom = document.createElement("div");
-        newNodeBottom.className = "announcement";
-        newNodeBottom.innerHTML = '<span>Beta 15 及 Sticky 扩展发布安全更新，详情查看置顶主题。 </span>';
-        vcurrent.parentNode.insertBefore(newNodeBottom, vcurrent.nextSibling);
-        vcurrent.setAttribute("class", "IndexPage-toolbar RemoveAnnounce");
-	}
-</script>
-<!-- <a href="http://p.tb.cn/74s4TO" target="_blank">Laravel 高危漏洞披露</a> <i class="fas fa-external-link-alt"></i>，Flarum 不受影响。线上环境请避免开启调试模式。 -->
-
-<style>
-    .IndexPage .DiscussionListItem-info>.item-tags,
-    .UserPage .DiscussionListItem-info>.item-tags {
-        margin-right: 0;
-        position: inherit;
-        padding-right: 10px
-    }
-
-    .IndexPage .DiscussionListItem-info>.item-tags,
-    .UserPage .DiscussionListItem-info>.item-tags {
-        transition: none;
-        mask-image: none;
-    }
-</style>
-
 <!-- 外链跳转 -->
 <script>
     document.addEventListener('click', event => {
