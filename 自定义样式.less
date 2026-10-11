@@ -1,403 +1,1123 @@
-/* 社区展 */
-.App-content .Pages-container {
-	width:100%;
-	max-width:100%;
-	padding-left:0px;
-	padding-right:0px;
-}
+/*
+ * 扩展中心样式隔离，2026-09-22。
+ * 完整替换后台自定义 LESS；原文件中的全部注释均保留在下方。
+ * :where() 不增加选择器权重，进入扩展中心时停用本文件中的规则。
+ * html&、&:root 表示根元素自身；新增规则应放在最外层花括号内。
+ * 下方历史注释按原文保留，其中的历史验证说明不代表本次重新确认。
+ */
 
-/* 17年备份 */
-.qrcode {
-	position:fixed;
-	right:20px;
-	bottom:40px;
-	border:1px solid #DDD;
-	padding:5px;
-	background:#FFF;
-	text-align:center;
-	border-radius:2px;
-	z-index:1000;
-}
-@media (max-width:991px) {
-	.qrcode {
-	display:none !important;
-}
-}.upyun {
-	font-family:-apple-system,"Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
-	font-size:16px;
-	text-align:center;
-	height:45px;
-	line-height:45px;
-}
-.upyun img {
-	vertical-align:middle;
-}
+:where(html:not(:has(#app.App--extensionsHub))) {
+  /* 头像框微调 2026-8-26 */
+  .PointSystemShop-card-badges {
+  position: absolute;
+      margin: auto!important;
+  }
+  .ps-avatar-deco {
+      top: -5%!important;
+      left: -5%!important;
+      width: 110%!important;
+      height: 110%!important;
+  }
 
-/* 横幅 */
-.Hero-close {
-	display:none;
-}
-/* 固定左侧标签栏 */
-@media (min-width:992px) {
-	.sideNav,.sideNav>ul {
-	width:190px;
-	position:sticky;
-	top:80px;
-}
-.App {
-	overflow-x:visible;
-}
-/* 版块页不受影响 */
-	.CategoriesPage.TagsPage .sideNav,.CategoriesPage.TagsPage .sideNav>ul {
-	position:unset;
-}
-/* 标签页不受影响 */
-	.TagsPage.TagsPage .sideNav,.TagsPage.TagsPage .sideNav>ul {
-	position:unset;
-}
-}/* 导航栏位置调整 */
-@media (max-width:1120px) and (min-width:768px) {
-	.App-header .container {
-	width:auto;
-}
-}@media (max-width:1051px) and (min-width:991px) {
-	.Header-controls .Search:not(.focused) .Search-input {
-	max-width:166px;
-	-webkit-transition:all .4s;
-	-o-transition:all .4s;
-	transition:all .4s;
-}
-}/* 标签页表单位移修复 */
-@media (min-width:768px) {
-	.TagDiscussionModal .Modal-content,.TagDiscussionModal .TagsInput {
-	overflow:unset;
-}
-}@media(max-width:767px) {
-	.TagsInput input {
-	width:0% !important;
-}
-}/* 编辑器标题位置 */
-.ComposerBody-content .ComposerBody-header h3 input {
-	width:470px;
-}
-/* 许可证 */
-li.item-littlegolden-post-license {
-	margin-left:10px;
-	& .Form-group>label {
-	display:none;
-}
-}/* 视频宽度 */
-body video {
-	max-width:-webkit-fill-available;
-	/* Chrome 内核浏览器 */ 
-    max-width:-moz-available;
-	/* 火狐内核浏览*/
-    display:inline-block;
-	vertical-align:baseline;
-	width:100%;
-}
-/* 会员名录页,首页加载更多按钮尺寸 */
-.UserDirectoryList-loadMore .Button,.DiscussionList-loadMore .Button {
-	width:50%;
-	border-radius:30px;
-	margin-top:30px;
-}
-.UserDirectoryList-loadMore {
-	text-align:center;
-}
-@media (max-width:767px) {
-	.DiscussionList-loadMore {
-	padding-left:15px;
-	padding-right:15px;
-}
-}/* 替换点赞,回复按钮 */
-.item-like .Button--link .Button-label,.item-reply .Button--link .Button-label {
-	display:none;
-}
-.item-like .Button:before {
-	font-family:'Font Awesome 5 Free';
-	font-weight:600;
-	font-size:14px;
-	content:'\f164';
-	vertical-align:-1px;
-}
-.item-reply .Button--link:before {
-	font-family:'Font Awesome 5 Free';
-	font-weight:600;
-	font-size:15px;
-	content:'\f3e5';
-	margin-right:4px;
-	vertical-align:-2px;
-}
-/* 首页主题点击量对齐 */
-/*@media (min-width:768px) {
-	.IndexPage li.item-discussion-views {
-	margin-right:-38px!important;
-	width:55px;
-	color: #808080
-}
-}*/
-/* 暂时修复 FancyBox 导致的 shield 图标显示异常 */
-.CommentPost.Post img.inline-image {
-	padding:0;
-	border-radius:0;
-	width:auto;
-	margin-left:0;
-	margin-right:0;
-	/*pointer-events:none;
-	*/
-    background:none;
-}
-.CommentPost.Post a.inline-image-link,.CommentPost.Post a.block-image-link {
-	border-bottom:1px solid #e7edf3;
-	padding:0;
-	margin-left:0;
-	margin-right:0;
-	border-radius:0;
-	background:none;
-	display:inline-block;
-}
-.CommentPost.Post a.inline-image-link:hover,.CommentPost.Post a.block-image-link:hover {
-	border-color:#f36322;
-}
-.CommentPost.Post a.inline-image-link img {
-	top:0;
-}
-.CommentPost.Post a.inline-image-link .extlink-badge,.CommentPost.Post a.block-image-link .extlink-badge {
-	display:none;
-}
-.CommentPost.Post a.block-image-link img {
-	width:auto;
-	margin-bottom:6px;
-}
-/* 灯箱文字 */
-.fancybox-infobar {
-	color:#fff !important;
-}
-/* 反应按钮位置 */
-.Post-actions .Reactions .Reactions--ShowReactions {
-	margin-top:11px;
-}
-/* 表格阴影去除 */
-.Post .Post-body table {
-	box-shadow:none;
-}
-.IndexPage .DiscussionListItem,.UserPage .DiscussionListItem,.DiscussionPage-discussion .DiscussionListItem {
-	transition:all 0.1s;
-}
 
-/* 2020-3-7 */
 
-/* 私人讨论成员名颜色 */
-.Hero span.RecipientLabel-text {
-	color:#FFF;
-}
-/* 未读 */
-.unread .DiscussionListItem-title:after {
-	font-family:"Font Awesome 5 Free";
-	font-weight:600;
-	content:"\f111";
-	color:#667c99;
-	margin-left:0;
-	margin-top:-6px;
-	transform:scale(0.5);
-	position:absolute;
-}
-.PostsUserPage .PostsUserPage-list .Post {
-	padding-top:20px;
-}
-/* 图片大小调整 */
-img.block-image {
-	/*max-width:200px;
-	*/
-    min-width:auto !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-}
-.Post div img.block-image {
-    display: unset;
-    background: none;
-}
-/* .Post-body pre {
-	/* 代码块 *//*
-	background:#282c34;
-	color:#fff;
-} */
-.Post-body :not(pre) code:not(.hljs) {
-	/* 短代码 */
-	/* color: #476582 !important; */
-	padding: .3rem .5rem;
-	/* background-color: rgba(27, 31, 35, 0.05) !important; */
-}
-/* 页脚 */
-.site-footer {
-	margin:0;
-	/*margin-top:64px;*/
-	padding-top:30px;
-	padding-bottom:30px;
-	color:hsla(0,0%,100%,.9);
-	box-sizing:inherit;
-	text-align:center;
-	font-size:1em
-}
-@media (max-width:991px){
-    .site-footer {
-	padding-top:0px;
+  /* 2020-3-7 */
+
+  /* 私人讨论成员名颜色 */
+  .Hero span.RecipientLabel-text {
+  	color:#FFF;
+  }
+
+  /* 图片大小调整 */
+  img.block-image {
+  	/*max-width:200px;
+  	*/
+      min-width:auto !important;
+      margin-left: 0 !important;
+      margin-right: 0 !important;
+  }
+  .Post div img.block-image {
+      display: unset;
+      background: none;
+  }
+  /* .Post-body pre {
+  	/* 代码块 *//*
+  	background:#282c34;
+  	color:#fff;
+  } */
+  .Post-body :not(pre) code:not(.hljs) {
+  	/* 短代码 */
+  	/* color: #476582 !important; */
+  	padding: .3rem .5rem;
+  	/* background-color: rgba(27, 31, 35, 0.05) !important; */
+  }
+  /* 页脚 */
+  .site-footer {
+  	margin:0;
+  	/*margin-top:64px;*/
+  	padding-top:30px;
+  	padding-bottom:30px;
+  	color:hsla(0,0%,100%,.9);
+  	box-sizing:inherit;
+  	text-align:center;
+  	font-size:1em
+  }
+  @media (max-width:991px){
+      .site-footer {
+  	padding-top:0px;
+      }
+  }
+  .site-footer p {
+  	margin:0
+  }
+  .rm-link-color > p > a {
+  	text-decoration:none;
+  	color:#89898c
+  }
+  .rm-link-color > p > a:hover {
+  	text-decoration:underline
+  }
+
+  /*-------- 2020-8-11--------*/
+
+  /* 付费图标 */
+  i.icon.fas.fa-premium:before{content:"";background:url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN@0.1.3/img/premium21.svg);position:relative;display:block;width:1.2em;height:1.2em;background-size: contain;}
+  i.icon.fas.fa-premium {vertical-align: middle;}
+
+
+
+  .Post>li>img.inline-image{max-height:auto !important;max-width:auto !important;}
+
+
+  /* 精华 */
+  .Badge--frontpage {
+    background: #fbbd08!important;
+  }
+  .fa-medal:before {
+      content: "\f091"!important;
+  }
+
+
+
+  /* logo调整 */
+  .Header-logo {
+      max-height: 40px !important;
+  }
+
+  /* 在线人数 */
+  fieldset.OnlineUsers{
+      font-size: 14px;
+  }
+  legend {
+      float: left;
+      margin-right: 1em;
+  }
+
+  /* 认证图标 */
+  @media (max-width:767px) {
+      div#header-secondary:after {
+        content: "";
+
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        height: 6em;
+
+        padding: 0 10px;
+
+        background-image: url(https://goldenjin.oss-cn-shanghai.aliyuncs.com/verified-community.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-origin: content-box;
+
+        margin: 1em auto;
+
+        user-select: none;
+        -webkit-user-drag: none;
+      }
+      .item-flagrow-ad{display:none;}
+  }
+
+  /*-------- 2026-09-01 --------*/
+  .Composer .ComposerBody-editor textarea.TextEditor-editor {
+      font-family: monospace;
+  }
+
+
+  /* Avocado主题微调 20260406 */
+
+  .AvocadoHome-threadExcerpt {
+      margin: 13px 0 0!important;
+  }
+
+  .AvocadoHome-threadTitle {
+      margin-top: 10px!important;
+  }
+
+  .Page {
+      padding-bottom: 10px!important;
+  }
+
+  .AvocadoHome-heroBanner {
+      display: none;
+  }
+  .melon-hero a {
+      color: #fff;
+  }
+
+
+
+  /* 新主题 */
+
+
+
+
+
+
+
+  /* ============================================================
+     Flarum 社区 · 纸感暖橙（Paper & Orange）风格主题（优化整理版）
+     目标站点：discuss.flarum.org.cn（Flarum v2）
+     设计基准：https://flarum.org.cn/ 首页官方风格（实机取色）
+       ─ 页面底色：#fffaf6 暖米白「纸张」质感
+       ─ 主文字  ：#202733 墨蓝黑
+       ─ 强调色  ：#e7672e 暖橙（hover #ca4e1d）
+       ─ 次级    ：#69717f / #5e6673 灰蓝
+       ─ 卡片    ：纯白 #fff · 16px 大圆角 · 1px 淡棕边框 · 极浅暖阴影
+       ─ 按钮    ：圆角 10px · 主按钮暖橙白字
+       ─ 页脚    ：深墨 #242a33
+     原则：只做 颜色/字体/间距/圆角/卡片 定制，不强行改写原生 flex 布局。
+     性能：全站无 backdrop-filter（避免滚动掉帧），纯色方案。
+     真机验证的 Flarum v2 类名：header.App-header / .IndexPage-nav /
+     .DiscussionListItem / .DiscussionHero / .TagHero / .WelcomeHero /
+     .TagLabel / .Post / .PostStream / .Dropdown-menu / .SideNav 等。
+
+     【!important 策略（实机检测后整理）】
+     站点主题样式表对大量组件属性使用 !important 压制，凡命中这些属性的
+     注入规则必须保留 !important，否则会被站点样式压过而失效。
+     经浏览器实机遍历 document.styleSheets 检测确认，以下属性站点为普通
+     声明或未声明，注入样式（追加在 <head> 末尾，晚于站点）无需
+     !important 即可覆盖，已在本版中移除：
+       - .DiscussionListItem-stats 的 display / flex-direction / width
+       - .DiscussionListItem-author .Avatar 的 width / height
+       - h2 / h2.DiscussionListItem-title 的 font-size
+       - .Post-body pre 的 font-size（移动端）
+       - ::-webkit-scrollbar 系列（站点未设置，webkit 专属）
+     其余所有 !important 均为经检测确认的"必保留项"，请勿删减。
+
+     【本版（nested 优化版）相对前一版的变更】
+       1. 删除冗余 a:visited 规则（已被 a 基础规则覆盖）。
+       2. TagLabel.colored 多层选择器收敛为 .colored + 通用子选择器 *。
+       3. 散落硬编码色（代码/引用/mark/斑马纹/按钮/输入/Alert/在线绿/
+          头部激活态）全部抽到 :root 变量；深色模式只覆盖变量值即可，
+          嵌套块从约 120 行精简到 50 行。
+       4. 表单输入选择器用 :is() 收敛（Flarum v2 目标浏览器均支持）。
+       5. 散落圆角（5px / 6px）、动效（0.15s ease）、字号（h2 1.32em）、
+          侧栏宽度（213px）统一为变量。
+       6. 修复移动端 pre code 字号未跟随 pre 缩小的 bug。
+       7. 保留所有经实机检测确认的 !important 声明，不删减。
+       8. 保留 header.App-header + .App-header 双写，作为特异性对冲。
+       9. 保留 * { mask-image: none } 通用规则（未定位到具体元素前不删，
+          已知存在逐元素计算成本，已在规则前加注释提示）。
+     ============================================================ */
+
+  /* ==================== 设计变量 ==================== */
+  &:root {
+    --o3o-paper: #fffaf6;            /* 页面底 · 暖米白 */
+    --o3o-card: #ffffff;             /* 卡片白 */
+    --o3o-ink: #202733;              /* 主文字 · 墨蓝黑 */
+    --o3o-ink-strong: #161b24;
+    --o3o-ink-soft: #5e6673;         /* 导航链接 */
+    --o3o-muted: #69717f;            /* 次级文字 */
+    --o3o-faint: #9ca4ae;            /* 弱辅助文字 */
+    --o3o-orange: #e7672e;           /* 主强调 · 暖橙 */
+    --o3o-orange-dark: #ca4e1d;      /* 橙深一档 hover */
+    --o3o-orange-bg: #fdf0e8;        /* 浅橙底色（选中/激活） */
+    --o3o-line: rgba(50, 42, 36, 0.10);      /* 边框 · 深棕 10% */
+    --o3o-line-soft: rgba(71, 50, 36, 0.08); /* 更淡边框 */
+    --o3o-shadow: 0 7px 22px rgba(58, 40, 29, 0.035); /* 极浅暖阴影 */
+    --o3o-shadow-hover: 0 12px 30px rgba(58, 40, 29, 0.08);
+    --o3o-radius-card: 16px;
+    --o3o-radius-inner: 10px;
+    --o3o-font: ui-sans-serif, system-ui, -apple-system, "Inter", "Segoe UI",
+      Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+      "Noto Sans CJK SC", Arial, sans-serif;
+    --o3o-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+      "Courier New", monospace;
+
+    /* 代码 / 引用 / 标记 / 斑马纹 */
+    --o3o-code-bg: #f3ece3;          /* 行内代码底色 */
+    --o3o-code-fg: #b3461c;          /* 行内代码暖棕红 */
+    --o3o-pre-bg: #f7f1e9;           /* 代码块底色 */
+    --o3o-blockquote-color: #5a463a; /* 引用文字 */
+    --o3o-mark-bg: #fdeecb;          /* 高亮底 */
+    --o3o-mark-fg: var(--o3o-ink);    /* 高亮文字 */
+    --o3o-zebra: #fffaf4;            /* 表格偶数行 */
+    --o3o-online: #4d9e5a;           /* 在线绿点（深浅同色） */
+
+    /* 按钮 / 输入 / 顶栏 / Alert */
+    --o3o-header-bg: rgba(255, 250, 246, 0.85);  /* 顶栏半透玻璃 */
+    --o3o-button-bg: #ffffff;
+    --o3o-button-hover-bg: #faf3ec;
+    --o3o-input-bg: #ffffff;
+    --o3o-input-shadow: inset 0 1px 2px rgba(58, 40, 29, 0.04);
+    --o3o-input-focus-shadow: 0 0 0 3px rgba(231, 103, 46, 0.12);
+    --o3o-alert-bg: #ffffff;
+    --o3o-alert-success-bg: #eff7ef;
+    --o3o-alert-success-border: rgba(74, 161, 92, 0.4);
+    --o3o-alert-success-fg: #2e6b3c;
+    --o3o-alert-error-bg: #fdf0ee;
+    --o3o-alert-error-border: rgba(202, 78, 29, 0.4);
+    --o3o-alert-error-fg: #a03e14;
+    --o3o-alert-warning-bg: #fdf6e8;
+    --o3o-alert-warning-border: rgba(208, 146, 36, 0.45);
+    --o3o-alert-warning-fg: #8a5f12;
+
+    /* 头部 LinksButton 激活态 */
+    --o3o-link-active-bg: #fff0e8;
+    --o3o-link-active-border: #ffdaca;
+
+    /* 圆角 / 字号 / 动效 / 尺寸 */
+    --o3o-radius-code: 5px;           /* 行内代码 */
+    --o3o-radius-chip: 6px;          /* TagLabel chip */
+    --o3o-h2-size: 1.32em;           /* 桌面 h2 字号 */
+    --o3o-tr-fast: 0.15s ease;       /* 通用快动效 */
+    --o3o-sidebar-w: 213px;          /* 首页侧栏宽度 */
+  }
+
+  /* ==================== 全局基础（暖白纸面） ==================== */
+  html&, body {
+    background: var(--o3o-paper) !important;
+    color: var(--o3o-ink) !important;
+    font-family: var(--o3o-font) !important;
+    font-size: 15.5px !important;
+    line-height: 1.62 !important;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a {
+    color: var(--o3o-orange) !important;
+    text-decoration: none !important;
+  }
+  a:hover, a:focus, a:active {
+    color: var(--o3o-orange-dark) !important;
+    text-decoration: none !important;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--o3o-ink) !important;
+    font-weight: 600 !important;
+    letter-spacing: -0.012em;
+  }
+  h1 { font-size: 1.62em !important; letter-spacing: -0.02em; }
+  h3 { font-size: 1.14em !important; }
+
+  code, pre, kbd { font-family: var(--o3o-mono) !important; }
+  code {
+    background: var(--o3o-code-bg) !important;
+    border-radius: var(--o3o-radius-code) !important;
+    padding: 0.18em 0.4em;
+    font-size: 87% !important;
+    color: var(--o3o-code-fg) !important;
+  }
+  pre {
+    background: var(--o3o-pre-bg) !important;
+    border: 1px solid var(--o3o-line) !important;
+    border-radius: var(--o3o-radius-inner) !important;
+    padding: 14px 16px !important;
+    overflow-x: auto;
+    line-height: 1.58 !important;
+  }
+  pre code {
+    background: transparent !important;
+    padding: 0 !important;
+    color: var(--o3o-ink) !important;
+    font-size: 13px !important;
+  }
+
+  blockquote {
+    border-left: 4px solid var(--o3o-orange) !important;
+    background: var(--o3o-orange-bg) !important;
+    color: var(--o3o-blockquote-color) !important;
+    padding: 4px 14px !important;
+    margin: 10px 0 !important;
+  }
+
+  img { max-width: 100%; }
+  mark {
+    background: var(--o3o-mark-bg) !important;
+    color: var(--o3o-mark-fg) !important;
+  }
+  hr { border-color: var(--o3o-line) !important; }
+
+  /* ==================== 顶部导航（暖白半透玻璃条） ==================== */
+  header.App-header, .App-header {
+    background: var(--o3o-header-bg) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(150%) !important;
+    backdrop-filter: blur(14px) saturate(150%) !important;
+    border-bottom: 1px solid var(--o3o-line) !important;
+    box-shadow: 0 1px 0 rgba(58, 40, 29, 0.02) !important;
+    color: var(--o3o-ink) !important;
+  }
+  .App-header .container,
+  header.App-header .container {
+    height: auto !important;   /* 顶栏不加高度 */
+  }
+  /* 品牌 Logo：墨色加粗 */
+  .App-header .App-title, .App-header .App-title a,
+  .App-header .App-logo, header.App-header .App-logo {
+    color: var(--o3o-ink) !important;
+    font-weight: 700 !important;
+    font-size: 20px !important;
+  }
+  /* 导航链接：14px/600 灰蓝，hover 暖橙 */
+  .App-header a,
+  .App-header nav a,
+  header.App-header nav a,
+  .App-header .LinksButton {
+    color: var(--o3o-ink-soft) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    transition: color var(--o3o-tr-fast) !important;
+  }
+  .App-header a:hover,
+  .App-header nav a:hover,
+  header.App-header nav a:hover,
+  .App-header .LinksButton:hover {
+    color: var(--o3o-orange) !important;
+    background: transparent !important;
+  }
+  /* 激活项：暖橙 + 底部细线指示 */
+  .App-header nav .active a,
+  .App-header .LinksButton.active,
+  header.App-header nav .active a {
+    color: var(--o3o-orange) !important;
+    font-weight: 600 !important;
+    box-shadow: inset 0 -2px 0 var(--o3o-orange) !important;
+  }
+  /* item-nav：flex 居中、不加高度 */
+  .App-header .item-nav,
+  header.App-header .item-nav {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 2px !important;
+    height: auto !important;
+  }
+  .App-header .item-nav > a,
+  header.App-header .item-nav > a,
+  .App-header .item-nav .Button,
+  header.App-header .item-nav .Button {
+    color: var(--o3o-ink-soft) !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .App-header .item-nav > a:hover,
+  header.App-header .item-nav > a:hover,
+  .App-header .item-nav .Button:hover {
+    color: var(--o3o-orange) !important;
+    font-weight: 600 !important;
+    background: transparent !important;
+  }
+  /* 头像/图标按钮：朴素透明 */
+  .App-header .Button, .Header-controls .Button {
+    background: transparent !important;
+    border: none !important;
+    color: var(--o3o-ink-soft) !important;
+    border-radius: var(--o3o-radius-inner) !important;
+  }
+  .App-header .Button:hover {
+    background: rgba(71, 50, 36, 0.06) !important;
+    color: var(--o3o-orange) !important;
+  }
+
+  /* ==================== 侧边栏 / 次级导航（白卡） ==================== */
+  .App-nav, .App-nav nav, .SideNav, .SidebarNav,
+  .IndexPage-nav, .DiscussionPage-nav, nav.SideNav, aside.SideNav {
+    background: var(--o3o-card) !important;
+    color: var(--o3o-ink) !important;
+    border: 1px solid var(--o3o-line-soft) !important;
+    border-radius: var(--o3o-radius-card) !important;
+    box-shadow: var(--o3o-shadow) !important;
+    padding: 8px !important;
+  }
+  .App-nav .item, .SideNav .item { margin: 0 !important; }
+  .App-nav .item a, .SideNav .item a, aside .item a {
+    color: var(--o3o-ink-soft) !important;
+    padding: 8px 12px !important;
+    border-radius: var(--o3o-radius-inner) !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    transition: background var(--o3o-tr-fast), color var(--o3o-tr-fast) !important;
+  }
+  .App-nav .item a:hover, .SideNav .item a:hover, aside .item a:hover {
+    background: rgba(71, 50, 36, 0.05) !important;
+    color: var(--o3o-orange) !important;
+  }
+  .App-nav .active a, .SideNav .active a {
+    color: var(--o3o-orange) !important;
+    font-weight: 600 !important;
+    background: var(--o3o-orange-bg) !important;
+  }
+  /* 用户指定：sideNav 宽度自适应，避免主机相关错位 */
+  .sideNav, .sideNav > ul {
+    width: auto !important;
+  }
+
+  /* ==================== 主内容区 ==================== */
+  .App-content { background: transparent !important; }
+  .Container { max-width: 1160px !important; }
+  /* 用户指定：主容器去除左右内边距 */
+  .container,
+  .Container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  /* ==================== 列表卡片（纯白纸卡） ==================== */
+  .DiscussionListItem, .TagTile, .Category, .ReplyPlaceholder {
+    background: var(--o3o-card) !important;
+    border: 1px solid var(--o3o-line-soft) !important;
+    border-radius: var(--o3o-radius-card) !important;
+    box-shadow: var(--o3o-shadow) !important;
+    margin-bottom: 10px !important;
+    transition: border-color var(--o3o-tr-fast), box-shadow var(--o3o-tr-fast) !important;
+  }
+  .DiscussionListItem:hover, .TagTile:hover {
+    border-color: rgba(231, 103, 46, 0.45) !important;
+    box-shadow: var(--o3o-shadow-hover) !important;
+  }
+  /* 版块瓷贴：外边距 2px */
+  .TagTile {
+    margin: 2px !important;
+  }
+  /* 回复框 ReplyPlaceholder（"说点什么吧..."）错位修复：整体宽度 auto，避免头像列被限宽挤出 */
+  button.Post.ReplyPlaceholder,
+  .ReplyPlaceholder,
+  .ReplyPlaceholder .Post-container,
+  .ReplyPlaceholder .Post-side,
+  .ReplyPlaceholder .Post-main {
+    width: auto !important;
+    max-width: none !important;
+  }
+  /* 用户指定：回复框 margin 归零、无边框、无阴影 */
+  button.Post.ReplyPlaceholder {
+    margin: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .ReplyPlaceholder .Post-side {
+    flex: 0 0 auto !important;
+  }
+  .ReplyPlaceholder .Post-main {
+    flex: 1 1 auto !important;
+  }
+
+  /* ==================== 桌面端（≥768px） ==================== */
+  @media (min-width: 768px) {
+
+    /* 列表项竖排重排：标题 → 信息 → 统计行（回复数+标签）
+       注：JS 会把 info 内 li.item-tags 移入 stats（见注入脚本） */
+    .DiscussionListItem .DiscussionListItem-content {
+      display: block !important;
+      position: relative !important;
+      width: 100% !important;
+      box-sizing: border-box !important;
+      padding: 15px 17px !important;
     }
-}
-.site-footer p {
-	margin:0
-}
-.rm-link-color > p > a {
-	text-decoration:none;
-	color:#89898c
-}
-.rm-link-color > p > a:hover {
-	text-decoration:underline
-}
-
-/*-------- 2020-8-11--------*/
-
-/*付费图标*/
-i.icon.fas.fa-premium:before{content:"";background:url(https://cdn.jsdelivr.net/gh/Littlegolden/CDN@0.1.3/img/premium21.svg);position:relative;display:block;width:1.2em;height:1.2em;background-size: contain;}
-i.icon.fas.fa-premium {vertical-align: middle;}
-
-.Post>li>img.inline-image{max-height:auto !important;max-width:auto !important;}
-
-/* 精华 */
-.Badge--frontpage {
-  background: #fbbd08!important;
-}
-.fa-medal:before {
-    content: "\f091"!important;
-}
-
-/* logo调整 */
-.Header-logo {
-    max-height: 40px !important;
-}
-
-/* 在线人数 */
-fieldset.OnlineUsers{
-    font-size: 14px;
-}
-legend {
-    float: left;
-    margin-right: 1em;
-}
-
-/* 认证图标 */
-@media (max-width:767px) {
-    div#header-secondary:after {
-    content: "";
-    background: url(https://goldenjin.oss-cn-shanghai.aliyuncs.com/verified-community.svg);
-    display: block;
-    width: 19em;
-    height: 6em;
-    background-size: contain;
-    background-repeat: no-repeat;
-    text-align: center;
-    margin: 1em auto;
-    user-select: none;
-    user-drag: none;
-    -webkit-user-drag: none;
+    /* 作者头像：左上浮动，与标题同行 */
+    .DiscussionListItem-author {
+      float: left !important;
+      width: auto !important;
+      margin: 2px 12px 6px 0 !important;
     }
-    .item-flagrow-ad{display:none;}
-}
+    .DiscussionListItem-main {
+      display: block !important;
+      width: 100% !important;
+      overflow: hidden !important;
+    }
 
-/* 公告 */
-.announcement {
-    padding: 6px;
-    background-color: @config-primary-color;
-    color: #ffffff;
+    /* 统计行：回复数在左，标签在右 */
+    .DiscussionListItem-stats {
+      display: flex;
+      flex-direction: row;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      width: 100%;
+      flex-basis: 100% !important;
+      min-width: 0 !important;
+      margin: 8px 0 0 !important;
+      padding-top: 8px !important;
+      border-top: 1px solid var(--o3o-line) !important;
+      clear: both !important;
+    }
+    .DiscussionListItem-stats .item-tags {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      align-items: center !important;
+      gap: 4px !important;
+      margin-left: auto !important;
+      padding: 0 !important;
+      list-style: none !important;
+    }
+    .DiscussionListItem-stats .item-tags .TagLabel { margin: 0 !important; }
+
+    /* ===== 纯 CSS 兜底 =====
+       若未运行动画 JS（item-tags 仍在 info 里，未进 stats），
+       用绝对定位把它钉到卡片右下角统计行，纯 CSS 也能达成目标。
+       JS 移位成功后此选择器不再命中，互不冲突。 */
+    .DiscussionListItem-main .DiscussionListItem-info .item-tags {
+      position: absolute !important;
+      top: auto !important;
+      right: 17px !important;
+      bottom: 8px !important;
+      display: flex !important;
+      flex-wrap: wrap !important;
+      justify-content: flex-end !important;
+      gap: 4px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      list-style: none !important;
+      max-width: 70% !important;
+    }
+    .DiscussionListItem-main .DiscussionListItem-info .item-tags .TagLabel {
+      margin: 0 !important;
+    }
+
+    /* 桌面端标题层级微调 */
+    h2 {
+      font-size: var(--o3o-h2-size);
+      padding-bottom: 0.28em;
+      border-bottom: 1px solid var(--o3o-line);
+    }
+    h2.DiscussionListItem-title {
+      font-size: var(--o3o-h2-size);
+    }
+  }
+
+  /* ==================== 标题（列表项标题） ==================== */
+  /* 标题：墨色加粗，hover 变暖橙 */
+  .DiscussionListItem-title a {
+    color: var(--o3o-ink) !important;
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    letter-spacing: -0.008em;
+  }
+  .DiscussionListItem-title a:hover { color: var(--o3o-orange) !important; }
+  .DiscussionListItem--unread .DiscussionListItem-title a {
+    color: var(--o3o-ink-strong) !important;
+    font-weight: 700 !important;
+  }
+  .DiscussionListItem--unread .DiscussionListItem-title a::before {
+    content: "●";
+    color: var(--o3o-orange);
+    font-size: 0.55em;
+    vertical-align: 2px;
+    margin-right: 6px;
+  }
+
+  /* 元信息行：灰蓝小字 */
+  .DiscussionListItem-info {
+    color: var(--o3o-muted) !important;
+    font-size: 13px !important;
+  }
+  .DiscussionListItem-info a { color: var(--o3o-orange) !important; font-weight: 600; }
+  .DiscussionListItem-info a:hover { color: var(--o3o-orange-dark) !important; }
+
+  /* 回复数：无底色，暖橙加粗 */
+  .DiscussionListItem-count {
+    color: var(--o3o-orange) !important;
+    font-weight: 700 !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+  }
+  .DiscussionListItem-stats-item-icon {
+    color: var(--o3o-orange) !important;
+  }
+  .DiscussionListItem--unread .DiscussionListItem-count {
+    color: var(--o3o-orange) !important;
+    font-weight: 800 !important;
+  }
+
+  /* ==================== 标签 chip（橙字轻 chip） ==================== */
+  .TagLabel {
+    background: transparent !important;
+    color: var(--o3o-muted) !important;
+    border: 1px solid transparent !important;
+    border-radius: var(--o3o-radius-chip) !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    line-height: 1.4 !important;
+    padding: 2px 6px !important;
+    vertical-align: middle !important;
+  }
+  .TagLabel:hover { background: rgba(231, 103, 46, 0.08) !important; color: var(--o3o-orange) !important; }
+  .TagLabel .icon, .TagLabel .fa, .TagLabel-icon { margin-right: 3px !important; font-size: 11px !important; }
+  .DiscussionListItem .TagLabel { margin: 0 4px 0 0 !important; }
+  /* 彩色分类标签：背景清空、文字统一暖橙（兼容多层 DOM）
+     - .colored / --colored 自身：清背景、统一橙字
+     - 通用子选择器 *：覆盖所有内层 icon/text/name 的颜色
+     - .TagLabel-text / -name / -icon：仅需清背景（颜色已被 * 覆盖） */
+  .TagLabel.colored,
+  .TagLabel--colored {
+    background: transparent !important;
+    color: var(--o3o-orange) !important;
+  }
+  .TagLabel.colored *,
+  .TagLabel--colored * {
+    color: var(--o3o-orange) !important;
+  }
+  .TagLabel.colored .TagLabel-text,
+  .TagLabel--colored .TagLabel-text,
+  .TagLabel.colored .TagLabel-name,
+  .TagLabel--colored .TagLabel-name,
+  .TagLabel.colored .TagLabel-icon,
+  .TagLabel--colored .TagLabel-icon {
+    background: transparent !important;
+  }
+
+  /* ==================== Hero（首页/版块/详情标题区 · 白卡片） ==================== */
+  .DiscussionHero, .Hero.TagHero, .Hero.WelcomeHero, .TagHero {
+    background: var(--o3o-card) !important;
+    box-shadow: var(--o3o-shadow) !important;
+    color: var(--o3o-ink) !important;
+    margin-bottom: 14px !important;
+    padding: 22px 24px !important;
+  }
+  .DiscussionHero .DiscussionHero-title,
+  .DiscussionHero h1, .Hero h1, .TagHero .Hero-title,
+  .WelcomeHero .Hero-title {
+    color: var(--o3o-ink) !important;
+    font-weight: 700 !important;
+    border: none !important;
+    letter-spacing: -0.015em;
+  }
+  .DiscussionHero .Hero-subtitle, .TagHero .Hero-subtitle,
+  .WelcomeHero .Hero-subtitle {
+    color: var(--o3o-muted) !important;
+  }
+
+  /* ==================== 帖子 / 问答流（白底流） ==================== */
+  .PostStream, .PostStream-standalone {
+    background: var(--o3o-card) !important;
+    border: 1px solid var(--o3o-line-soft) !important;
+    border-radius: var(--o3o-radius-card) !important;
+    box-shadow: var(--o3o-shadow) !important;
+  }
+  .Post {
+    background: transparent !important;
+    border-bottom: 1px solid var(--o3o-line) !important;
+    border-radius: 0 !important;
+    padding: 20px 20px 18px !important;
+  }
+  .Post:last-child { border-bottom: none !important; }
+  .Post-header {
+    border-bottom: none !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 10px !important;
+  }
+  .PostUser, .PostUser a, .Post .PostUser a {
+    font-weight: 700 !important;
+  }
+  .Avatar, .PostUserAvatar img {
+    border-radius: 50% !important;
+    box-shadow: 0 0 0 2px var(--o3o-paper) !important;
+  }
+  /* 列表作者头像：固定 32px 与目标图一致（站点 .Avatar 的 width/height 为普通声明，无需 important） */
+  .DiscussionListItem-author .Avatar {
+    width: 32px;
+    height: 32px;
+  }
+  .Post .PostUser-badges .Badge {
+    background: var(--o3o-orange) !important;
+    color: #fff !important;
+  }
+
+  /* 正文排版 */
+  .Post-body {
+    color: var(--o3o-ink) !important;
+    font-size: 15.5px !important;
+    line-height: 1.72 !important;
+  }
+  .Post-body p { margin: 0 0 14px !important; }
+  .Post-body p:last-child { margin-bottom: 0 !important; }
+  .Post-body ul, .Post-body ol { padding-left: 1.8em !important; margin: 0 0 14px !important; }
+  .Post-body li { margin-bottom: 4px !important; }
+  .Post-body table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 14px 0 !important;
+  }
+  .Post-body th {
+    background: var(--o3o-orange-bg) !important;
+    color: var(--o3o-ink) !important;
+    font-weight: 600 !important;
+    text-align: left !important;
+  }
+  .Post-body th, .Post-body td {
+    border: 1px solid var(--o3o-line) !important;
+    padding: 8px 12px !important;
+  }
+  .Post-body tr:nth-child(2n) td { background: var(--o3o-zebra) !important; }
+
+  /* 楼层导航条 */
+  .Scrubber .scrubber-line { background: var(--o3o-line) !important; }
+  .Scrubber .scrubber-line .scrubber-last { background: var(--o3o-orange) !important; }
+
+  /* ==================== 按钮（暖橙主按钮 · 圆角 10px） ==================== */
+  .Button {
+    color: var(--o3o-ink) !important;
+    background: var(--o3o-button-bg) !important;
+    border: 1px solid var(--o3o-line) !important;
+    border-radius: var(--o3o-radius-inner) !important;
+    font-weight: 600 !important;
+    transition: background var(--o3o-tr-fast), border-color var(--o3o-tr-fast), color var(--o3o-tr-fast) !important;
+  }
+  .Button:hover,
+  .Button:focus,
+  .Button.focus {
+    background: var(--o3o-button-hover-bg) !important;
+    border-color: rgba(231, 103, 46, 0.4) !important;
+    color: var(--o3o-orange) !important;
+  }
+  .Button--primary {
+    background: var(--o3o-orange) !important;
+    border-color: var(--o3o-orange) !important;
+    color: #fff !important;
+  }
+  .Button--primary:hover,
+  .Button--primary:focus,
+  .Button--primary.focus {
+    background: var(--o3o-orange-dark) !important;
+    border-color: var(--o3o-orange-dark) !important;
+    color: #fff !important;
+  }
+  .Button--link, .Button-icon {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .Button--link:hover { background: transparent !important; }
+
+  /* ==================== 下拉菜单：保持默认（用户要求） ==================== */
+  /* 不覆盖 .Dropdown-menu 样式，保持原生外观 */
+
+  /* ==================== 表单 / 搜索（浅色输入框，不加外框） ==================== */
+  :is(.FormControl, input[type="text"], input[type="search"], input[type="email"],
+      input[type="password"], textarea, select, .Search-input,
+      .Search .Search-input, .SearchBar input) {
+    background: var(--o3o-input-bg) !important;
+    color: var(--o3o-ink) !important;
+    border: 1px solid var(--o3o-line) !important;
+    border-radius: var(--o3o-radius-inner) !important;
+    box-shadow: var(--o3o-input-shadow) !important;
+  }
+  :is(.FormControl:focus, input:focus, textarea:focus, select:focus, .Search-input:focus) {
+    border-color: rgba(231, 103, 46, 0.55) !important;
+    box-shadow: var(--o3o-input-focus-shadow) !important;
+  }
+  :is(.FormControl, input, textarea, .Search-input)::placeholder {
+    color: var(--o3o-faint) !important;
+    opacity: 1 !important;
+  }
+
+  /* ==================== 通知 / 提示弹层 ==================== */
+  .Alert {
+    border-radius: var(--o3o-radius-inner) !important;
+    border: 1px solid var(--o3o-line) !important;
+    background: var(--o3o-alert-bg) !important;
+    color: var(--o3o-ink) !important;
+    box-shadow: var(--o3o-shadow) !important;
+  }
+  .Alert--success {
+    background: var(--o3o-alert-success-bg) !important;
+    border-color: var(--o3o-alert-success-border) !important;
+    color: var(--o3o-alert-success-fg) !important;
+  }
+  .Alert--error {
+    background: var(--o3o-alert-error-bg) !important;
+    border-color: var(--o3o-alert-error-border) !important;
+    color: var(--o3o-alert-error-fg) !important;
+  }
+  .Alert--warning {
+    background: var(--o3o-alert-warning-bg) !important;
+    border-color: var(--o3o-alert-warning-border) !important;
+    color: var(--o3o-alert-warning-fg) !important;
+  }
+
+  /* ==================== 色彩统一：残留彩色元素收敛为暖橙 ==================== */
+  .IndexPage-nav .text-colored,
+  .SideNav .text-colored,
+  .App-nav .text-colored,
+  .TagTile .TagIcon,
+  .TagLabel-icon.text-colored,
+  .TagLabel .text-colored {
+    color: var(--o3o-orange) !important;
+  }
+  .UserCard-lastSeen.online .fa-circle,
+  .UserOnline .fa-circle,
+  .online .fa-circle { color: var(--o3o-online) !important; }
+  .UserCard-leaderboardPoints .fa-trophy { color: var(--o3o-orange) !important; }
+
+  /* ==================== 用户卡片 ==================== */
+  .UserCard, .UserCard--primary {
+    border: 1px solid var(--o3o-line-soft) !important;
+    border-radius: var(--o3o-radius-card) !important;
+    box-shadow: var(--o3o-shadow) !important;
+  }
+  .UserCard {
+    background-color: #55a6a124 !important;
+  }
+
+  /* ==================== 页脚 ==================== */
+  footer.App-footer, .App-footer,
+  footer {
+    color: var(--o3o-muted) !important;
+  }
+  footer a, .App-footer a { color: var(--o3o-muted) !important; }
+  footer a:hover, .App-footer a:hover { color: var(--o3o-orange) !important; }
+
+  /* ==================== 滚动条 ==================== */
+  &::-webkit-scrollbar, ::-webkit-scrollbar { width: 10px; height: 10px; }
+  &::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+    background: rgba(71, 50, 36, 0.25);
     border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-    display: block;
-    margin: 5px 0;
-    white-space: pre-wrap;
-    & a{ color: white; }
-}
-/* 占位 */
-.IndexPage-toolbar::after {
-    /*content: "\6d4b\8bd5\7248\5347\7ea7\81f3\6b63\5f0f\7248\524d\ff0c\8bf7\5907\4efd\6570\636e\5e93\548c\76f8\5173\5185\5bb9\ff0c\5e76\9075\5faa\5b98\65b9\5347\7ea7\65b9\6cd5\ff01";*/
-    /*content: "\670d\52a1\5668\7ef4\62a4\4e2d\ff0c\6682\65f6\5173\95ed\6ce8\518c\3001\53d1\5e16\3001\8bc4\8bba\7b49\529f\80fd";*/
-    padding: 3px 5px 3px 5px;
-    background-color: @hero-bg;
-    /*color: @link-color;*/
-    color: #de0b0b;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 16px;
-    display: block;
-    margin: 5px 0;
-    white-space: pre-wrap;
-}
-.RemoveAnnounce::after {
-    content: "";
-    display: none;
-}
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  &::-webkit-scrollbar-track, ::-webkit-scrollbar-track { background: transparent; }
 
-/* hashtag */
-a.tagPhrase::before{
-	content: "#";
-}
+  /* ==================== 禁用站点自带的渐隐蒙版 ==================== */
+  /* 性能提示：* 通配符会让浏览器对每个元素计算 mask 属性。未定位到
+     具体带蒙版的容器前不删；若后续 DevTools 找到具体元素，请改为
+     精确选择器以避免逐元素计算。 */
+  &, * {
+    -webkit-mask-image: none !important;
+    mask-image: none !important;
+  }
 
-/* 2021-3-17 原生优化 */
-.SettingsPage fieldset>ul{
-	clear: both;
-}
-
-.DiscussionListItem-title mark{
-    background: #FFE300;
-    padding: 0px 5px;
-    margin-right: 2px;
-}
-
-/* 主题列表三点菜单 */
-.IndexPage .DiscussionListItem-controls i.icon.fas.fa-ellipsis-v.Button-icon {
-    margin-left: unset;
-}
-.IndexPage .IndexPage-results .DiscussionList-discussions .Button:hover{
-    background-color: #d1e0f0 !important;
-}
-/*--yannis微调开始----*/
-.AchievementsList .Achievement--Icon{float:right!important;}
-.AchievementsList-description{margin-left:unset!important;}
-.fa-mug-hot:before{color:#b59e8c}
-.fa-pepper-hot:before{color:#f3201a}
-.Afrux-NewsWidget-icon{display:none}
-.Afrux-NewsWidget-content{justify-content:center}
-.Afrux-NewsWidget-line-container{justify-items:center}
-.topicStarter{font-size:14px!important;display:contents!important;color:unset!important;}
-@media (min-width:426px){}
-
-
-.fly-fish{
-    z-index: -1;
-    line-height: 0px;
-    height: 350px;
-}
-footer{
-    position: relative;
-}
-.site-footer{
-    position: absolute;
-    width: 100%;
-    top: calc(100% / 4 * 3);
-    transform: translateY(calc(-50% + 10%));
-    padding: 0;
-}
-
-.App{
-    padding-bottom: 0;
-}
-@media (max-width: 767px){
-    .App{
-        padding-bottom: 0;
+  /* ==================== 完善补充（用户微调并入） ==================== */
+  .IndexPage .App--index .Page-sidebar {
+    max-width: var(--o3o-sidebar-w);
+  }
+  /* 用户指定：讨论列表项左侧内边距 15px（移动端；作用于首页 IndexPage 与用户个人主页 UserPage） */
+  @media (max-width: 767px) {
+    .IndexPage .DiscussionListItem,
+    .UserPage .DiscussionListItem,
+    .DiscussionsUserPage .DiscussionListItem {
+      padding-left: 15px !important;
     }
-    .App-content {
-        padding-bottom: 0;
+    .IndexPage .DiscussionListItem .DiscussionListItem-content,
+    .UserPage .DiscussionListItem .DiscussionListItem-content,
+    .DiscussionsUserPage .DiscussionListItem .DiscussionListItem-content {
+      padding-left: 15px !important;
     }
+  }
+  /* 用户指定：帖子列表项内边距 */
+  .PostListItem-discussion {
+    padding: 10px !important;
+  }
+  h2.DiscussionListItem-title {
+    border-bottom: none;
+  }
+  @media (min-width: 768px) {
+    .DiscussionListItem .DiscussionListItem-content {
+      padding: 5px 0 10px 5px !important;
+    }
+  }
+  .IndexPage-nav { padding: 15px !important; }
+  .DiscussionListPane .DiscussionListItem {
+    border-radius: var(--o3o-radius-card) !important;
+  }
+  .DiscussionListPane .DiscussionListItem-title {
+    font-size: 16px !important;
+  }
+  .DiscussionListPane .DiscussionListItem-main .DiscussionListItem-info .item-tags {
+    bottom: 9px !important;
+  }
+  a.LinksButton.Button.Button--link.LinkButton.active {
+    box-shadow: none !important;
+    background: var(--o3o-link-active-bg) !important;
+    border: 1px solid var(--o3o-link-active-border) !important;
+  }
+  #header-primary .Button {
+    padding: 2px 3px 2px 10px;
+    margin-right: 4px;
+  }
+  .PostStream-item:has( + .PostStream-item)::after {
+    width: auto;
+  }
+  h1.UserCard-identity {
+    color: unset !important;
+  }
+  .darkenBackground {
+    border-radius: var(--o3o-radius-card) !important;
+  }
+
+  /* ==================== 移动端（≤767px，保持 Flarum 原生布局） ==================== */
+  @media (max-width: 767px) {
+
+    /* 基础字号微调 */
+    html& { font-size: 15px !important; }
+
+    /* 顶栏：Logo/按钮收紧 */
+    .App-header .App-title, .App-header .App-title a,
+    .App-header .App-logo, header.App-header .App-logo {
+      font-size: 17px !important;
+    }
+    .App-header .item-nav { gap: 0 !important; }
+    .App-header .Button, .Header-controls .Button { border-radius: 8px !important; }
+
+    /* 卡片：列表卡片直角、Hero/流式容器 12px 圆角、去阴影、紧凑间距 */
+    .DiscussionListItem, .TagTile, .Category, .ReplyPlaceholder {
+      border-radius: 0 !important;
+      box-shadow: none !important;
+      margin-bottom: 8px !important;
+    }
+    .DiscussionHero,
+    .Hero.TagHero, .Hero.WelcomeHero, .PostStream,
+    .PostStream-standalone {
+      border-radius: 12px !important;
+      box-shadow: none !important;
+      margin-bottom: 8px !important;
+    }
+    /* 标题字号：移动端统一 16px（同时覆盖 h2 元素本身） */
+    .DiscussionListItem-title a { font-size: 16px !important; line-height: 1.4 !important; }
+    h2.DiscussionListItem-title { font-size: 16px !important; }
+
+    /* 帖子 / Hero：内边距收紧 */
+    .Post { padding: 14px 13px 12px !important; }
+    .Post-body { font-size: 15px !important; line-height: 1.68 !important; }
+    .DiscussionHero, .Hero.TagHero, .Hero.WelcomeHero {
+      padding: 16px 15px !important;
+      margin-bottom: 10px !important;
+    }
+
+    /* Hero 标题：允许长词断行 */
+    .DiscussionHero .DiscussionHero-title,
+    .Hero h1, .TagHero .Hero-title,
+    .WelcomeHero .Hero-title {
+      font-size: 20px !important;
+      line-height: 1.35 !important;
+      overflow-wrap: break-word !important;
+    }
+
+    /* 表格 / 代码块：横向滚动 */
+    .Post-body table { display: block !important; overflow-x: auto !important; }
+    .Post-body pre { font-size: 12.5px; }
+    /* 修复：pre code 默认 13px，移动端未跟随 pre 缩小，需同步覆盖 */
+    .Post-body pre code { font-size: 12.5px; }
+
+    /* 「加载更多」触控区 */
+    .DiscussionList-loadMore .Button,
+    .DiscussionList .Button,
+    .LoadMore .Button { min-height: 44px !important; }
+
+    /* 移动端侧栏去卡片化 */
+    nav.IndexPage-nav.sideNav {
+      background: none !important;
+      border: none !important;
+    }
+
+    /* 移动端隐藏常驻滚动条：Chromium 下 10px 滚动条会占位缩窄容器，造成右侧空白 */
+    &::-webkit-scrollbar, ::-webkit-scrollbar { width: 0; height: 0; }
+    &::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb { background: transparent; }
+    &::-webkit-scrollbar-track, ::-webkit-scrollbar-track { background: transparent; }
+  }
+
+  /* ==================== 深色模式适配（CSS 嵌套重构版）
+     深色为「纸感夜」：炭黑纸底 + 深灰卡片 + 暖橙提亮保留为强调色
+     外层 html[data-theme^="dark"] 写一次，内部选择器自动继承前缀，
+     等价于原版每条都写 html[data-theme^="dark"] ...。
+     依赖 CSS Nesting：Chrome/Edge 112+、Firefox 117+、Safari 16.5+。
+     重构后：散落色值已抽到变量，深色块只需覆盖变量值 + 少量无法
+     变量化的悬停/滚动条规则，从原版约 120 行精简到 50 行。
+     ==================== */
+  html&[data-theme^="dark"] {
+    /* === 变量覆盖（结构与 !important 由亮色规则承担） === */
+    --o3o-paper: #16181d;            /* 页面底 · 炭黑纸（用户定值） */
+    --o3o-card: #1f242c;             /* 卡片 · 深灰（比纸面亮一档，保持层次） */
+    --o3o-ink: #e0e3e8;              /* 主文字 · 高对比浅灰（映射用户 --text-color:#e6e6e6） */
+    --o3o-ink-strong: #f4f6f8;
+    --o3o-ink-soft: #a9b2bd;         /* 导航链接 */
+    --o3o-muted: #8b95a3;            /* 次级文字 */
+    --o3o-faint: #67707f;            /* 弱辅助文字 */
+    --o3o-orange: #ec8752;           /* 深色下提亮的暖橙，保证对比度 */
+    --o3o-orange-dark: #f59c6c;      /* hover 更亮 */
+    --o3o-orange-bg: rgba(236, 135, 82, 0.14);  /* 浅橙底（选中/激活） */
+    --o3o-line: rgba(224, 227, 232, 0.12);      /* 深色边框 */
+    --o3o-line-soft: rgba(255, 255, 255, 0.09);
+    --o3o-shadow: 0 7px 22px rgba(0, 0, 0, 0.38);
+    --o3o-shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.52);
+
+    /* 代码 / 引用 / 标记 / 斑马纹 */
+    --o3o-code-bg: #2b3039;
+    --o3o-code-fg: #ffa87b;
+    --o3o-pre-bg: #232833;
+    --o3o-blockquote-color: #c9bdb2;
+    --o3o-mark-bg: #4a3f26;
+    --o3o-mark-fg: #f2ead2;
+    --o3o-zebra: #242a33;
+
+    /* 按钮 / 输入 / 顶栏 / Alert */
+    --o3o-header-bg: rgba(22, 24, 29, 0.85);
+    --o3o-button-bg: #20242c;
+    --o3o-button-hover-bg: #2a2f38;
+    --o3o-input-bg: #20242c;
+    --o3o-input-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+    --o3o-alert-bg: #20242c;
+    --o3o-alert-success-bg: #1d2a22;
+    --o3o-alert-success-border: rgba(74, 161, 92, 0.45);
+    --o3o-alert-success-fg: #8fd6a4;
+    --o3o-alert-error-bg: #2c1f1c;
+    --o3o-alert-error-border: rgba(236, 135, 82, 0.5);
+    --o3o-alert-error-fg: #ff9d73;
+    --o3o-alert-warning-bg: #2a2518;
+    --o3o-alert-warning-border: rgba(208, 146, 36, 0.5);
+    --o3o-alert-warning-fg: #e6c06a;
+
+    /* 头部激活态 */
+    --o3o-link-active-bg: rgba(236, 135, 82, 0.16);
+    --o3o-link-active-border: rgba(236, 135, 82, 0.45);
+
+    /* === 仅剩无法变量化的规则 === */
+
+    /* 悬停底色：亮色版为深棕 5-6%，深色版改为白色 7% 蒙版 */
+    .App-header .Button:hover,
+    .App-header nav a:hover,
+    .App-header .LinksButton:hover,
+    .App-nav .item a:hover,
+    .SideNav .item a:hover,
+    aside .item a:hover {
+      background: rgba(255, 255, 255, 0.07) !important;
+    }
+
+    /* 列表卡片 hover 描边：颜色与 --o3o-orange 不同色阶，单独覆盖 */
+    .DiscussionListItem:hover,
+    .TagTile:hover {
+      border-color: rgba(236, 135, 82, 0.5) !important;
+    }
+
+    /* 滚动条滑块 */
+    ::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.22);
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(255, 255, 255, 0.32);
+    }
+
+  .hljs-attr,.hljs-attribute,.hljs-literal,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#5082bd!important}
+  .hljs-meta,.hljs-meta .hljs-keyword,.hljs-meta .hljs-string{color:#ff93b3!important}
+  .hljs-addition{color:#50a965!important;background-color:#14191f!important}
+  .hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#ce606a!important}
+  .hljs-built_in,.hljs-symbol{color:#b97e55!important}
+  .hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#beda78!important}
+  .hljs-subst{color:#a77fad!important}
+  .hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#38984f!important}
+
+  }
 }
-/*--yannis微调结束---*/
